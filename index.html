@@ -2070,8 +2070,8 @@ function switchMetaVol(idx) {
     data: {
       labels: ['전전주 4/6~12', '지난주 4/13~19'],
       datasets: [
-        { type:'bar',  label:'CPM (원)', data:[11648,13048], backgroundColor:['rgba(99,102,241,0.6)','rgba(99,102,241,1)'], borderRadius:5, yAxisID:'y', order:2 },
-        { type:'bar',  label:'CPA (원)', data:[13385,11155], backgroundColor:['rgba(245,158,11,0.6)','rgba(245,158,11,1)'], borderRadius:5, yAxisID:'y', order:2 },
+        { type:'bar',  label:'CPM (원)', data:[11648,13048], backgroundColor:['rgba(99,102,241,0.6)','rgba(99,102,241,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
+        { type:'bar',  label:'CPA (원)', data:[13385,11155], backgroundColor:['rgba(245,158,11,0.6)','rgba(245,158,11,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
         { type:'line', label:'CTR (%)',  data:[1.82,2.53],   borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.1)', borderWidth:2.5, pointRadius:5, pointBackgroundColor:'#10b981', tension:0, yAxisID:'y2', order:1 },
       ]
     },
