@@ -214,6 +214,7 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div class="toggle-bar">
         <button class="toggle-btn active" onclick="switchPanel(0)">이번주 VS 지난주</button>
         <button class="toggle-btn" onclick="switchPanel(1)">4월 1~24일 VS 3월 1~24일</button>
+        <button class="toggle-btn" onclick="switchPanel(2)">이번주 vs 전월 동일기간</button>
       </div>
 
       <div class="cmp-panel active" id="panel-0">
@@ -436,6 +437,94 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         </div>
       </div>
 
+
+      <div class="cmp-panel" id="panel-2">
+        <div class="vs-header">
+          <div class="vs-badge vs-prev-mo">전월 동일기간 3/20~23</div>
+          <div class="vs-label">VS</div>
+          <div class="vs-badge vs-curr">이번주 4/20~23</div>
+        </div>
+        <div class="legend">
+          <span><span class="legend-dot" style="background:#34d399;"></span>전월 동일기간 3/20~23</span>
+          <span><span class="legend-dot" style="background:#1a1a2e;"></span>이번주 4/20~23</span>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-box">
+            <div class="kpi-lbl">전체 매출</div>
+            <div class="kpi-prev">21,360,873원</div>
+            <div class="kpi-curr">24,704,902원</div>
+            <span class="delta up">▲ 15.7%</span>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-lbl">총 광고비</div>
+            <div class="kpi-prev">7,115,537원</div>
+            <div class="kpi-curr">7,757,498원</div>
+            <span class="delta up">▲ 9.0%</span>
+          </div>
+          <div class="kpi-box">
+            <div class="kpi-lbl">ROAS</div>
+            <div class="kpi-prev">300%</div>
+            <div class="kpi-curr">318%</div>
+            <span class="delta up">▲ 6.0%</span>
+          </div>
+        </div>
+        <div class="chart-sep"></div>
+        <div class="chart-tab-bar">
+          <button class="chart-tab active" onclick="switchChart('p3',0)">매출 <small style='font-size:9px;color:#f59e0b;'>4일 비교</small></button>
+          <button class="chart-tab" onclick="switchChart('p3',1)">채널별 광고비</button>
+          <button class="chart-tab" onclick="switchChart('p3',2)">ROAS</button>
+        </div>
+        <div class="chart-single active" id="p3-c0"><div class="chart-card"><div class="chart-lbl">전체 매출</div><canvas id="c3_sales"></canvas></div></div>
+        <div class="chart-single" id="p3-c1">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;" id="ch-tabs-3">
+            <button class="chart-tab active" onclick="selectCostCh('c3_cost','mar_same','last5','전월동일',DAY_LABELS_4,'all',this,'ch-tabs-3')">전체</button>
+            <button class="chart-tab" onclick="selectCostCh('c3_cost','mar_same','last5','전월동일',DAY_LABELS_4,'meta',this,'ch-tabs-3')">메타</button>
+            <button class="chart-tab" onclick="selectCostCh('c3_cost','mar_same','last5','전월동일',DAY_LABELS_4,'searchad',this,'ch-tabs-3')">검색광고</button>
+            <button class="chart-tab" onclick="selectCostCh('c3_cost','mar_same','last5','전월동일',DAY_LABELS_4,'gfa',this,'ch-tabs-3')">GFA</button>
+            <button class="chart-tab" onclick="selectCostCh('c3_cost','mar_same','last5','전월동일',DAY_LABELS_4,'advoost',this,'ch-tabs-3')">애드부스트</button>
+          </div>
+          <div class="chart-card"><div class="chart-lbl" id="lbl-c3_cost">채널별 광고비</div><canvas id="c3_cost"></canvas></div>
+        </div>
+        <div class="chart-single" id="p3-c2"><div class="chart-card"><div class="chart-lbl">ROAS (%)</div><canvas id="c3_roas"></canvas></div></div>
+        <div class="budget-sec">
+          <div class="budget-title">📊 채널별 예산 배분 비교</div>
+          <div class="budget-row">
+            <div class="budget-period">이번주</div>
+            <div class="budget-bar-wrap">
+              <div style="background:#6366f1;height:100%;width:18.0%;border-radius:99px 0 0 99px;"></div>
+              <div style="background:#34d399;height:100%;width:27.3%;"></div>
+              <div style="background:#f59e0b;height:100%;width:26.9%;"></div>
+              <div style="background:#8b5cf6;height:100%;width:22.4%;border-radius:0 99px 99px 0;"></div>
+            </div>
+            <div class="budget-labels">
+              <span style="color:#6366f1;">메타 18.0%</span>
+              <span style="color:#34d399;">검색 27.3%</span>
+              <span style="color:#f59e0b;">GFA 26.9%</span>
+              <span style="color:#8b5cf6;">ADV 22.4%</span>
+            </div>
+          </div>
+          <div class="budget-row">
+            <div class="budget-period">전월동일</div>
+            <div class="budget-bar-wrap">
+              <div style="background:#6366f1;height:100%;width:18.3%;border-radius:99px 0 0 99px;"></div>
+              <div style="background:#34d399;height:100%;width:25.8%;"></div>
+              <div style="background:#f59e0b;height:100%;width:23.9%;"></div>
+              <div style="background:#8b5cf6;height:100%;width:32.0%;border-radius:0 99px 99px 0;"></div>
+            </div>
+            <div class="budget-labels">
+              <span style="color:#6366f1;">메타 18.3%</span>
+              <span style="color:#34d399;">검색 25.8%</span>
+              <span style="color:#f59e0b;">GFA 23.9%</span>
+              <span style="color:#8b5cf6;">ADV 32.0%</span>
+            </div>
+          </div>
+        </div>
+        <div class="dark-box">
+          <div class="d-row"><span class="d-icon">📈</span>이번주 매출 24,704,902원 vs 전월 동일기간 21,360,873원 — 동일 요일 대비 ▲15.7% 성장.</div>
+          <div class="d-row"><span class="d-icon">📊</span>ROAS 300% → 318% (▲6.0%) — 광고 효율도 소폭 개선.</div>
+          <div class="d-row"><span class="d-icon">⚠️</span>광고비 ▲9.0% 증가 상황에서도 매출 성장이 앞섬 → 효율적 확장.</div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -1378,6 +1467,13 @@ const COST_DATA = {
     advoost: [535750, 437293, 594854, 454063, 599397, 613943, 513239, 289944, 195942, 295020, 212920, 278724, 374867, 919556, 588292, 283162, 425817, 245417, 404879, 360970, 491220, 505431, 382006, 0],
     google: [0, 0, 0, 0, 0, 0, 23002, 310928, 276077, 453180, 307331, 374471, 309460, 333055, 276705, 104723, 104168, 106103, 101601, 102868, 102464, 103945, 103187, 0],
   },
+  mar_same: {
+    meta: [297577, 384965, 338170, 280561],
+    searchad: [452991, 429341, 462803, 489038],
+    gfa: [434457, 467592, 323184, 475340],
+    advoost: [520637, 549827, 642508, 566546],
+    google: [0, 0, 0, 0],
+  },
 };
 
 const costCharts = {};
@@ -1444,18 +1540,26 @@ const D2 = {
   mar: { sales:[6437798, 4873470, 5349037, 4432013, 6229358, 4479685, 4438880, 4960410, 5795553, 5088019, 4426984, 6511860, 5176775, 4695353, 5651825, 5182076, 5763034, 5711332, 6016708, 5190350, 4668190, 4637202, 6865131, 5963826], cost:[1543567, 1094682, 1055711, 1131493, 1062810, 1029099, 1142590, 1049782, 1277229, 1111851, 1415135, 1314154, 1344083, 1624118, 1743409, 1417112, 1615381, 1640110, 1651147, 1705662, 1831725, 1766665, 1811485, 1952708], roas:[417, 445, 507, 392, 586, 435, 388, 473, 454, 458, 313, 496, 385, 289, 324, 366, 357, 348, 364, 304, 255, 262, 379, 305] },
   apr: { sales:[7205963, 6027943, 4176453, 4269679, 4335814, 5459088, 5332409, 7728352, 5726413, 5779212, 5860830, 6532550, 6798224, 7186947, 5888185, 6224204, 7867344, 7339279, 8055860, 6727969, 6241861, 5818558, 5916514, 0], cost:[1640591, 1558602, 1627825, 1365994, 1605174, 1838127, 1766310, 1968662, 2486640, 2866023, 2305076, 2275328, 2260461, 2883875, 2437258, 1705179, 1651635, 1276474, 1575389, 1601890, 2306742, 2044803, 1804063, 0], roas:[439, 387, 257, 313, 270, 297, 302, 393, 230, 202, 254, 287, 301, 249, 242, 365, 476, 575, 511, 420, 271, 285, 328, 0] },
 };
+const D_MS = {
+  전월동일: { sales:[5190350, 4668190, 4637202, 6865131], cost:[1705662, 1831725, 1766665, 1811485], roas:[304, 255, 262, 379] },
+  이번주: { sales:[6727969, 6241861, 5818558, 5916514], cost:[1601890, 2306742, 2044803, 1804063], roas:[420, 271, 285, 328] },
+};
 
 makeChart('c2_sales', D2.mar.sales, D2.apr.sales, true, '3월 1~24일', '#34d399', DAY_LABELS_24);
 makeChart('c2_roas',  D2.mar.roas,  D2.apr.roas,  'pct', '3월 1~24일', '#34d399', DAY_LABELS_24);
-makeCostChart('c2_cost', 'mar24', 'apr24', '3월', DAY_LABELS_24);
+makeCostChart('c2_cost', 'mar24', 'apr24', '3월', DAY_LABELS_24)
+makeChart('c3_sales', D_MS.전월동일.sales, D_MS.이번주.sales, true, '전월동일 3/20~23', '#34d399', DAY_LABELS_4);
+makeChart('c3_roas', D_MS.전월동일.roas, D_MS.이번주.roas, 'pct', '전월동일 3/20~23', '#34d399', DAY_LABELS_4);
+makeCostChart('c3_cost', 'mar_same', 'last5', '전월동일', DAY_LABELS_4);;
 
 const panelCharts = {
   0: ['c1_sales','c1_cost','c1_roas'],
   1: ['c2_sales','c2_cost','c2_roas'],
+  2: ['c3_sales','c3_cost','c3_roas'],
 };
 
 function switchChart(prefix, idx) {
-  const panelId = prefix === 'p1' ? 'panel-0' : 'panel-1';
+  const panelId = prefix === 'p1' ? 'panel-0' : prefix === 'p2' ? 'panel-1' : 'panel-2';
   const panel = document.getElementById(panelId);
   panel.querySelectorAll('.chart-tab').forEach((b,i) => b.classList.toggle('active', i===idx));
   panel.querySelectorAll('.chart-single').forEach((c,i) => {
