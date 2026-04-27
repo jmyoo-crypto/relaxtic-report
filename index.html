@@ -163,6 +163,8 @@ tr.row-hl td { font-weight: 800; background: #fff; }
 .cr-camp-group.active{display:flex;}
 .cr-camp-chart{margin-top:16px;padding:12px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;}
 .meta-front-panel{display:none;}.meta-front-panel.active{display:block;}
+.mfc-btn{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;}
+.mfc-btn.active{background:#6366f1;color:#fff;border-color:#6366f1;}
 .cr-tab {
   padding: 8px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0;
   background: #f8fafc; font-size: 13px; font-weight: 700; color: #64748b;
@@ -718,7 +720,7 @@ tr.row-hl td { font-weight: 800; background: #fff; }
   </div>
 
   <div class="card">
-    <div style="font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:12px;">📊 비교 기준 — 자사몰 매출 · 메타 광고비 · ROAS</div>
+    <div style="font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:12px;">📊 비교 기준 — 자사몰 매출 · 광고비 · ROAS</div>
     <div class="toggle-bar" id="meta-front-toggle">
       <button class="toggle-btn active" onclick="switchMetaFront(0,this)">지난주 vs 지지난주</button>
       <button class="toggle-btn" onclick="switchMetaFront(1,this)">4월 vs 3월</button>
@@ -729,6 +731,10 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="vs-label">VS</div>
         <div class="vs-badge vs-curr">지난주 4/20~26</div>
       </div>
+      <div style="display:flex;gap:6px;margin:10px 0 14px;">
+        <button class="mfc-btn active" onclick="switchMetaCost(0,this)">메타만</button>
+        <button class="mfc-btn" onclick="switchMetaCost(1,this)">메타+구글</button>
+      </div>
       <div class="kpi-grid">
         <div class="kpi-box">
           <div class="kpi-lbl">자사몰 매출</div>
@@ -737,23 +743,23 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <span class="tag-dn">▼ 42.4%</span>
         </div>
         <div class="kpi-box">
-          <div class="kpi-lbl">광고비(메타+구글)</div>
-          <div class="kpi-prev">3,678,413원</div>
-          <div class="kpi-curr">3,598,930원</div>
-          <span class="tag-dn">▼ 2.2%</span>
+          <div class="kpi-lbl" id="mfc-cost-lbl">광고비 (메타)</div>
+          <div class="kpi-prev" id="mfc-cost-prev">2,342,598원</div>
+          <div class="kpi-curr" id="mfc-cost-curr">2,883,404원</div>
+          <span id="mfc-cost-delta"><span class="tag-up">▲ 23.1%</span></span>
         </div>
         <div class="kpi-box">
           <div class="kpi-lbl">ROAS (메타→자사몰)</div>
-          <div class="kpi-prev">285%</div>
-          <div class="kpi-curr">167%</div>
-          <span class="tag-dn">▼ 41.4%</span>
+          <div class="kpi-prev" id="mfc-roas-prev">447%</div>
+          <div class="kpi-curr" id="mfc-roas-curr">209%</div>
+          <span id="mfc-roas-delta"><span class="tag-dn">▼ 53.2%</span></span>
         </div>
       </div>
       <div style="margin-top:14px;">
         <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;font-size:12px;font-weight:600;color:#555;">
           <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#34d399;vertical-align:middle;margin-right:5px;"></span>지지난주(4/13~19) 자사몰</span>
           <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#6366f1;vertical-align:middle;margin-right:5px;"></span>지난주(4/20~26) 자사몰</span>
-          <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#94a3b8;vertical-align:middle;margin-right:5px;border-top:2px dashed #94a3b8;"></span>광고비(메타+구글)</span>
+          <span id="mfc-chart-cost-lbl"><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#94a3b8;vertical-align:middle;margin-right:5px;border-top:2px dashed #94a3b8;"></span>광고비(메타)</span>
         </div>
         <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:14px 18px;">
           <canvas id="metaCafe24TrendChart" style="max-height:220px;"></canvas>
@@ -789,10 +795,29 @@ tr.row-hl td { font-weight: 800; background: #fff; }
     </div>
   </div>
   <script>
+  const MFC_DATA = {
+    0: {
+      cost_lbl: '광고비 (메타)',
+      cost_prev: '2,342,598원', cost_curr: '2,883,404원',
+      cost_delta: "<span class=\"tag-up\">\u25b2 23.1%</span>",
+      roas_prev: '447%', roas_curr: '209%',
+      roas_delta: "<span class=\"tag-dn\">\u25bc 53.2%</span>",
+      cost_line: [143446, 316699, 483133, 455068, 466789, 477276, 540993], cost_chart_lbl: '광고비(메타)'
+    },
+    1: {
+      cost_lbl: '광고비 (메타+구글)',
+      cost_prev: '3,678,413원', cost_curr: '3,598,930원',
+      cost_delta: "<span class=\"tag-dn\">\u25bc 2.2%</span>",
+      roas_prev: '285%', roas_curr: '167%',
+      roas_delta: "<span class=\"tag-dn\">\u25bc 41.4%</span>",
+      cost_line: [246314, 419163, 587078, 558255, 569207, 575191, 643722], cost_chart_lbl: '광고비(메타+구글)'
+    }
+  };
+  let _metaCafe24Chart = null;
   (function(){
     const el = document.getElementById('metaCafe24TrendChart');
     if (!el) return;
-    new Chart(el, {
+    _metaCafe24Chart = new Chart(el, {
       type: 'line',
       data: {
         labels: ['월','화','수','목','금','토','일'],
@@ -812,8 +837,8 @@ tr.row-hl td { font-weight: 800; background: #fff; }
             tension: 0.35, fill: true, yAxisID: 'yRev'
           },
           {
-            label: '지난주 광고비(메타+구글)',
-            data: [246314, 419163, 587078, 558255, 569207, 575191, 643722],
+            label: '광고비(메타)',
+            data: [143446, 316699, 483133, 455068, 466789, 477276, 540993],
             borderColor: '#94a3b8', backgroundColor: 'transparent',
             borderDash: [5,4], pointBackgroundColor: '#94a3b8', pointRadius: 3,
             tension: 0.25, fill: false, yAxisID: 'yCost'
@@ -1904,6 +1929,23 @@ window.addEventListener('load',()=>initCampChart(0));
 function switchMetaFront(idx,btn){
   document.getElementById('meta-front-toggle').querySelectorAll('.toggle-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
   document.querySelectorAll('.meta-front-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
+}
+function switchMetaCost(idx,btn){
+  document.querySelectorAll('.mfc-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const d=MFC_DATA[idx];
+  document.getElementById('mfc-cost-lbl').textContent=d.cost_lbl;
+  document.getElementById('mfc-cost-prev').textContent=d.cost_prev;
+  document.getElementById('mfc-cost-curr').textContent=d.cost_curr;
+  document.getElementById('mfc-cost-delta').innerHTML=d.cost_delta;
+  document.getElementById('mfc-roas-prev').textContent=d.roas_prev;
+  document.getElementById('mfc-roas-curr').textContent=d.roas_curr;
+  document.getElementById('mfc-roas-delta').innerHTML=d.roas_delta;
+  document.getElementById('mfc-chart-cost-lbl').innerHTML='<span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#94a3b8;vertical-align:middle;margin-right:5px;border-top:2px dashed #94a3b8;"></span>'+d.cost_chart_lbl;
+  if(_metaCafe24Chart){
+    _metaCafe24Chart.data.datasets[2].data=d.cost_line;
+    _metaCafe24Chart.data.datasets[2].label=d.cost_chart_lbl;
+    _metaCafe24Chart.update();
+  }
 }
 
 buildCrChart(0);
