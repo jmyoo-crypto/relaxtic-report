@@ -749,6 +749,16 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <span class="tag-dn">▼ 53.2%</span>
         </div>
       </div>
+      <div style="margin-top:14px;">
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-bottom:10px;font-size:12px;font-weight:600;color:#555;">
+          <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#34d399;vertical-align:middle;margin-right:5px;"></span>지지난주(4/13~19) 자사몰</span>
+          <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#6366f1;vertical-align:middle;margin-right:5px;"></span>지난주(4/20~26) 자사몰</span>
+          <span><span style="display:inline-block;width:10px;height:3px;border-radius:2px;background:#94a3b8;vertical-align:middle;margin-right:5px;border-top:2px dashed #94a3b8;"></span>메타 광고비</span>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:14px 18px;">
+          <canvas id="metaCafe24TrendChart" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <div class="meta-front-panel" id="meta-front-1">
       <div class="vs-header">
@@ -778,6 +788,59 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       </div>
     </div>
   </div>
+  <script>
+  (function(){
+    const el = document.getElementById('metaCafe24TrendChart');
+    if (!el) return;
+    new Chart(el, {
+      type: 'line',
+      data: {
+        labels: ['월','화','수','목','금','토','일'],
+        datasets: [
+          {
+            label: '지지난주 자사몰',
+            data: [569324, 1520847, 1308485, 1167004, 2944644, 1397479, 1558960],
+            borderColor: '#34d399', backgroundColor: 'rgba(52,211,153,0.08)',
+            pointBackgroundColor: '#34d399', pointRadius: 4,
+            tension: 0.35, fill: true, yAxisID: 'yRev'
+          },
+          {
+            label: '지난주 자사몰',
+            data: [233569, 674911, 715628, 450564, 1000092, 988423, 1961988],
+            borderColor: '#6366f1', backgroundColor: 'rgba(99,102,241,0.08)',
+            pointBackgroundColor: '#6366f1', pointRadius: 4,
+            tension: 0.35, fill: true, yAxisID: 'yRev'
+          },
+          {
+            label: '지난주 메타광고비',
+            data: [143446, 316699, 483133, 455068, 466789, 477276, 540993],
+            borderColor: '#94a3b8', backgroundColor: 'transparent',
+            borderDash: [5,4], pointBackgroundColor: '#94a3b8', pointRadius: 3,
+            tension: 0.25, fill: false, yAxisID: 'yCost'
+          }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ' ' + ctx.dataset.label + ': ' + ctx.parsed.y.toLocaleString() + '원' } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+          yRev: {
+            position: 'left', beginAtZero: true, grid: { color: '#f3f4f6' },
+            ticks: { font: { size: 10 }, callback: v => (v/10000).toFixed(0) + '만' }
+          },
+          yCost: {
+            position: 'right', beginAtZero: true, grid: { drawOnChartArea: false },
+            ticks: { font: { size: 10 }, callback: v => (v/10000).toFixed(0) + '만' }
+          }
+        }
+      }
+    });
+  })();
+  </script>
 
   <div class="card">
     <div class="flow">
