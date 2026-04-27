@@ -156,6 +156,11 @@ tr.row-hl td { font-weight: 800; background: #fff; }
 
 /* 소재 토글 탭 */
 .cr-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.cr-camp-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.cr-camp-btn{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;padding:5px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;}
+.cr-camp-btn.active{background:#1a1a2e;color:#fff;border-color:#1a1a2e;}
+.cr-camp-group{display:none;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.cr-camp-group.active{display:flex;}
 .cr-tab {
   padding: 8px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0;
   background: #f8fafc; font-size: 13px; font-weight: 700; color: #64748b;
@@ -231,26 +236,26 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="kpi-box">
             <div class="kpi-lbl">전체 매출</div>
             <div class="kpi-prev">49,360,043원</div>
-            <div class="kpi-curr">24,704,902원</div>
-            <span class="delta dn">▼ 49.9%</span>
+            <div class="kpi-curr">30,990,694원</div>
+            <span class="delta dn">▼ 37.2%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">총 광고비</div>
             <div class="kpi-prev">13,790,271원</div>
-            <div class="kpi-curr">8,874,296원</div>
-            <span class="delta dn">▼ 35.6%</span>
+            <div class="kpi-curr">9,709,143원</div>
+            <span class="delta dn">▼ 29.6%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">ROAS</div>
             <div class="kpi-prev">358%</div>
-            <div class="kpi-curr">278%</div>
-            <span class="delta dn">▼ 22.3%</span>
+            <div class="kpi-curr">319%</div>
+            <span class="delta dn">▼ 10.9%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">순마진(공헌이익)</div>
             <div class="kpi-prev">20,284,318원</div>
-            <div class="kpi-curr">8,411,124원</div>
-            <span class="delta dn">▼ 58.5%</span>
+            <div class="kpi-curr">7,576,277원</div>
+            <span class="delta dn">▼ 62.6%</span>
           </div>
         </div>
 
@@ -279,18 +284,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="budget-row">
             <div class="budget-period">이번주</div>
             <div class="budget-bar-wrap">
-              <div style="background:#6366f1;height:100%;width:21.0%;border-radius:99px 0 0 99px;"></div>
-              <div style="background:#34d399;height:100%;width:30.0%;"></div>
-              <div style="background:#f59e0b;height:100%;width:23.5%;"></div>
-              <div style="background:#8b5cf6;height:100%;width:19.6%;"></div>
-              <div style="background:#3b82f6;height:100%;width:5.8%;border-radius:0 99px 99px 0;"></div>
+              <div style="background:#6366f1;height:100%;width:19.2%;border-radius:99px 0 0 99px;"></div>
+              <div style="background:#34d399;height:100%;width:27.5%;"></div>
+              <div style="background:#f59e0b;height:100%;width:24.5%;"></div>
+              <div style="background:#8b5cf6;height:100%;width:23.5%;"></div>
+              <div style="background:#3b82f6;height:100%;width:5.3%;border-radius:0 99px 99px 0;"></div>
             </div>
             <div class="budget-labels">
-              <span style="color:#6366f1;">메타 21.0%</span>
-              <span style="color:#34d399;">검색 30.0%</span>
-              <span style="color:#f59e0b;">GFA 23.5%</span>
-              <span style="color:#8b5cf6;">ADV 19.6%</span>
-              <span style="color:#3b82f6;">구글 5.8%</span>
+              <span style="color:#6366f1;">메타 19.2%</span>
+              <span style="color:#34d399;">검색 27.5%</span>
+              <span style="color:#f59e0b;">GFA 24.5%</span>
+              <span style="color:#8b5cf6;">ADV 23.5%</span>
+              <span style="color:#3b82f6;">구글 5.3%</span>
             </div>
           </div>
           <div class="budget-row">
@@ -327,20 +332,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="kpi-box">
             <div class="kpi-lbl">전체 매출</div>
             <div class="kpi-prev">128,544,869원</div>
-            <div class="kpi-curr">142,499,651원</div>
-            <span class="delta up">▲ 10.9%</span>
+            <div class="kpi-curr">148,785,443원</div>
+            <span class="delta up">▲ 15.7%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">총 광고비</div>
             <div class="kpi-prev">34,331,708원</div>
-            <div class="kpi-curr">45,968,919원</div>
-            <span class="delta dn">▲ 33.9%</span>
+            <div class="kpi-curr">46,803,766원</div>
+            <span class="delta dn">▲ 36.3%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">ROAS</div>
             <div class="kpi-prev">374%</div>
-            <div class="kpi-curr">310%</div>
-            <span class="delta dn">▼ 17.1%</span>
+            <div class="kpi-curr">318%</div>
+            <span class="delta dn">▼ 15.0%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">순마진(공헌이익)</div>
@@ -375,18 +380,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="budget-row">
             <div class="budget-period">4월 1~24일</div>
             <div class="budget-bar-wrap">
-              <div style="background:#6366f1;height:100%;width:16.3%;border-radius:99px 0 0 99px;"></div>
-              <div style="background:#34d399;height:100%;width:26.1%;"></div>
-              <div style="background:#f59e0b;height:100%;width:28.0%;"></div>
-              <div style="background:#8b5cf6;height:100%;width:21.8%;"></div>
-              <div style="background:#3b82f6;height:100%;width:7.8%;border-radius:0 99px 99px 0;"></div>
+              <div style="background:#6366f1;height:100%;width:16.1%;border-radius:99px 0 0 99px;"></div>
+              <div style="background:#34d399;height:100%;width:25.6%;"></div>
+              <div style="background:#f59e0b;height:100%;width:28.1%;"></div>
+              <div style="background:#8b5cf6;height:100%;width:22.5%;"></div>
+              <div style="background:#3b82f6;height:100%;width:7.7%;border-radius:0 99px 99px 0;"></div>
             </div>
             <div class="budget-labels">
-              <span style="color:#6366f1;">메타 16.3%</span>
-              <span style="color:#34d399;">검색 26.1%</span>
-              <span style="color:#f59e0b;">GFA 28.0%</span>
-              <span style="color:#8b5cf6;">ADV 21.8%</span>
-              <span style="color:#3b82f6;">구글 7.8%</span>
+              <span style="color:#6366f1;">메타 16.1%</span>
+              <span style="color:#34d399;">검색 25.6%</span>
+              <span style="color:#f59e0b;">GFA 28.1%</span>
+              <span style="color:#8b5cf6;">ADV 22.5%</span>
+              <span style="color:#3b82f6;">구글 7.7%</span>
             </div>
           </div>
           <div class="budget-row">
@@ -425,20 +430,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="kpi-box">
             <div class="kpi-lbl">전체 매출</div>
             <div class="kpi-prev">21,360,873원</div>
-            <div class="kpi-curr">24,704,902원</div>
-            <span class="delta up">▲ 15.7%</span>
+            <div class="kpi-curr">30,990,694원</div>
+            <span class="delta up">▲ 45.1%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">총 광고비</div>
             <div class="kpi-prev">7,115,537원</div>
-            <div class="kpi-curr">8,874,296원</div>
-            <span class="delta up">▲ 24.7%</span>
+            <div class="kpi-curr">9,709,143원</div>
+            <span class="delta up">▲ 36.4%</span>
           </div>
           <div class="kpi-box">
             <div class="kpi-lbl">ROAS</div>
             <div class="kpi-prev">300%</div>
-            <div class="kpi-curr">278%</div>
-            <span class="delta dn">▼ 7.3%</span>
+            <div class="kpi-curr">319%</div>
+            <span class="delta up">▲ 6.3%</span>
           </div>
         </div>
         <div class="chart-sep"></div>
@@ -464,16 +469,16 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="budget-row">
             <div class="budget-period">이번주</div>
             <div class="budget-bar-wrap">
-              <div style="background:#6366f1;height:100%;width:21.0%;border-radius:99px 0 0 99px;"></div>
-              <div style="background:#34d399;height:100%;width:30.0%;"></div>
-              <div style="background:#f59e0b;height:100%;width:23.5%;"></div>
-              <div style="background:#8b5cf6;height:100%;width:19.6%;border-radius:0 99px 99px 0;"></div>
+              <div style="background:#6366f1;height:100%;width:19.2%;border-radius:99px 0 0 99px;"></div>
+              <div style="background:#34d399;height:100%;width:27.5%;"></div>
+              <div style="background:#f59e0b;height:100%;width:24.5%;"></div>
+              <div style="background:#8b5cf6;height:100%;width:23.5%;border-radius:0 99px 99px 0;"></div>
             </div>
             <div class="budget-labels">
-              <span style="color:#6366f1;">메타 21.0%</span>
-              <span style="color:#34d399;">검색 30.0%</span>
-              <span style="color:#f59e0b;">GFA 23.5%</span>
-              <span style="color:#8b5cf6;">ADV 19.6%</span>
+              <span style="color:#6366f1;">메타 19.2%</span>
+              <span style="color:#34d399;">검색 27.5%</span>
+              <span style="color:#f59e0b;">GFA 24.5%</span>
+              <span style="color:#8b5cf6;">ADV 23.5%</span>
             </div>
           </div>
           <div class="budget-row">
@@ -493,9 +498,9 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           </div>
         </div>
         <div class="dark-box">
-          <div class="d-row"><span class="d-icon">📈</span>이번주 매출 24,704,902원 vs 전월 동일기간 21,360,873원 — 동일 요일 대비 ▲15.7% 성장.</div>
-          <div class="d-row"><span class="d-icon">📊</span>ROAS 300% → 278% (▼7.3%) — 광고 효율도 소폭 개선.</div>
-          <div class="d-row"><span class="d-icon">⚠️</span>광고비 ▲24.7% 증가 상황에서도 매출 성장이 앞섬 → 효율적 확장.</div>
+          <div class="d-row"><span class="d-icon">📈</span>이번주 매출 30,990,694원 vs 전월 동일기간 21,360,873원 — 동일 요일 대비 ▲45.1% 성장.</div>
+          <div class="d-row"><span class="d-icon">📊</span>ROAS 300% → 319% (▲6.3%) — 광고 효율도 소폭 개선.</div>
+          <div class="d-row"><span class="d-icon">⚠️</span>광고비 ▲36.4% 증가 상황에서도 매출 성장이 앞섬 → 효율적 확장.</div>
         </div>
       </div>
     </div>
@@ -512,27 +517,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <table>
         <thead><tr>
           <th style="text-align:left;">채널</th>
+          <th>지지난주 매출<small style="display:block;font-weight:400;color:#94a3b8;">4/6~12 (7일)</small></th>
           <th>지난주 매출<small style="display:block;font-weight:400;color:#94a3b8;">4/13~19 (7일)</small></th>
           <th>이번주 매출<small style="display:block;font-weight:400;color:#94a3b8;">4/20~23 (4일)</small></th>
-          <th>변화</th>
-          <th>지난주 건<small style="display:block;font-weight:400;color:#94a3b8;">4/13~19</small></th>
-          <th>이번주 건<small style="display:block;font-weight:400;color:#94a3b8;">4/20~23</small></th>
+          <th>변화<small style="display:block;font-weight:400;color:#94a3b8;">지난주→이번주</small></th>
+          <th>지지난주 건</th>
+          <th>지난주 건</th>
+          <th>이번주 건</th>
         </tr></thead>
         <tbody>
-              <tr><td style="text-align:left;">smartstore</td><td>33,209,500원</td><td>23,448,330원</td><td><span class="tag-dn">▼ 29.4%</span></td><td>621건</td><td>439건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">easypos</td><td>8,662,000원</td><td>3,879,000원</td><td><span class="tag-dn">▼ 55.2%</span></td><td>158건</td><td>71건</td></tr>
-              <tr><td style="text-align:left;">coupang</td><td>5,683,800원</td><td>3,580,600원</td><td><span class="tag-dn">▼ 37.0%</span></td><td>99건</td><td>77건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">cafe24</td><td>10,466,743원</td><td>3,074,764원</td><td><span class="tag-dn">▼ 70.6%</span></td><td>242건</td><td>61건</td></tr>
-              <tr><td style="text-align:left;">ohou</td><td>3,607,000원</td><td>2,652,000원</td><td><span class="tag-dn">▼ 26.5%</span></td><td>92건</td><td>65건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">groupbuy</td><td>7,102,308원</td><td>2,243,686원</td><td><span class="tag-dn">▼ 68.4%</span></td><td>126건</td><td>45건</td></tr>
-              <tr><td style="text-align:left;">grip</td><td>166,000원</td><td>1,976,000원</td><td><span class="tag-up">▲ 1090.4%</span></td><td>4건</td><td>13건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">present</td><td>1,911,400원</td><td>1,470,000원</td><td><span class="tag-dn">▼ 23.1%</span></td><td>33건</td><td>32건</td></tr>
-              <tr><td style="text-align:left;">jcohs</td><td>1,971,000원</td><td>1,462,000원</td><td><span class="tag-dn">▼ 25.8%</span></td><td>39건</td><td>28건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">dreamus</td><td>1,544,000원</td><td>462,000원</td><td><span class="tag-dn">▼ 70.1%</span></td><td>26건</td><td>8건</td></tr>
-              <tr><td style="text-align:left;">amazon_jp</td><td>111,125원</td><td>—</td><td><span class="tag-dn">⏸</span></td><td>7건</td><td>3건</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">talkstore</td><td>118,000원</td><td>—</td><td><span class="tag-dn">⏸</span></td><td>2건</td><td>—</td></tr>
-              <tr><td style="text-align:left;">dutyfree</td><td>4,410,000원</td><td>—</td><td><span class="tag-dn">⏸</span></td><td>—</td><td>—</td></tr>
-              <tr class="row-hl"><td style="text-align:left;">hyundai</td><td>30,303,000원</td><td>-2,383,000원</td><td><span class="tag-dn">⏸</span></td><td>396건</td><td>-10건</td></tr>
+              <tr><td style="text-align:left;">smartstore</td><td>32,058,320원</td><td>33,209,500원</td><td>23,448,330원</td><td><span class="tag-dn">▼ 29.4%</span></td><td>593건</td><td>621건</td><td>439건</td></tr>
+              <tr class="row-hl"><td style="text-align:left;">coupang</td><td>6,927,546원</td><td>5,683,800원</td><td>4,467,600원</td><td><span class="tag-dn">▼ 21.4%</span></td><td>140건</td><td>99건</td><td>93건</td></tr>
+              <tr><td style="text-align:left;">cafe24</td><td>3,432,988원</td><td>10,466,743원</td><td>3,074,764원</td><td><span class="tag-dn">▼ 70.6%</span></td><td>71건</td><td>242건</td><td>61건</td></tr>
         </tbody>
       </table>
     </div>
@@ -574,13 +570,13 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="kpi-box">
           <div class="kpi-lbl">네이버 광고비</div>
           <div class="kpi-prev">10,111,858원</div>
-          <div class="kpi-curr">6,494,279원</div>
+          <div class="kpi-curr">7,329,126원</div>
           <span class="delta dn">▼ 41.8%</span>
         </div>
         <div class="kpi-box">
           <div class="kpi-lbl">ROAS</div>
           <div class="kpi-prev">328%</div>
-          <div class="kpi-curr">293%</div>
+          <div class="kpi-curr">260%</div>
           <span class="delta dn">▼ 1.2%</span>
         </div>
       </div>
@@ -590,8 +586,8 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <thead><tr><th>채널</th><th>지난주 4/13~19</th><th>이번주 4/20~4/23</th><th>증감</th></tr></thead>
           <tbody>
             <tr><td>검색광고</td><td>3,535,110원</td><td>2,666,043원</td><td><span class="tag-dn">▼ 40.1%</span></td></tr>
-            <tr><td>GFA</td><td>3,334,758원</td><td>2,088,609원</td><td><span class="tag-dn">▼ 37.4%</span></td></tr>
-            <tr class="row-hl"><td>애드부스트</td><td>3,241,990원</td><td>1,739,627원</td><td><span class="tag-dn">▼ 46.3%</span></td></tr>
+            <tr><td>GFA</td><td>3,334,758원</td><td>2,379,725원</td><td><span class="tag-dn">▼ 37.4%</span></td></tr>
+            <tr class="row-hl"><td>애드부스트</td><td>3,241,990원</td><td>2,283,358원</td><td><span class="tag-dn">▼ 46.3%</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -649,8 +645,8 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <thead><tr><th>채널</th><th>지난주 4/13~19</th><th>이번주 4/20~4/23</th><th>지난주 대비</th></tr></thead>
         <tbody>
           <tr><td>검색광고</td><td>3,535,110원</td><td>2,666,043원</td><td><span class="tag-dn">▼ 40.1%</span></td></tr>
-          <tr><td>GFA</td><td>3,334,758원</td><td>2,088,609원</td><td><span class="tag-dn">▼ 37.4%</span></td></tr>
-          <tr class="row-hl"><td>애드부스트</td><td>3,241,990원</td><td>1,739,627원</td><td><span class="tag-dn">▼ 46.3%</span></td></tr>
+          <tr><td>GFA</td><td>3,334,758원</td><td>2,379,725원</td><td><span class="tag-dn">▼ 37.4%</span></td></tr>
+          <tr class="row-hl"><td>애드부스트</td><td>3,241,990원</td><td>2,283,358원</td><td><span class="tag-dn">▼ 46.3%</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -660,7 +656,7 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <thead><tr><th>채널</th><th>지난주 매출</th><th>이번주 매출</th><th>지난주 대비</th></tr></thead>
         <tbody>
           <tr><td>smartstore</td><td>33,209,500원</td><td>19,049,630원</td><td><span class="tag-dn">▼ 42.6%</span></td></tr>
-          <tr class="row-hl"><td>coupang</td><td>5,683,800원</td><td>3,580,600원</td><td><span class="tag-dn">▼ 37.0%</span></td></tr>
+          <tr class="row-hl"><td>coupang</td><td>5,683,800원</td><td>4,467,600원</td><td><span class="tag-dn">▼ 37.0%</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -707,8 +703,8 @@ tr.row-hl td { font-weight: 800; background: #fff; }
           <div class="flow-tag">WHAT — 질문</div>
           <div class="flow-title">광고비 ▼27.3%, 구매수 ▼73.3% — 이번주 왜 전환이 급감했을까?</div>
           <ul class="flow-text">
-            <li>CTR 2.53% → 2.97%로 클릭 효율은 개선됐지만 구매 전환이 크게 낮아짐.</li>
-            <li>CPA 12,659원 → 34,502원 (▲172.6%) — 광고 귀인 구매수 210 → 56건.</li>
+            <li>CTR 2.53% → 2.86%로 클릭 효율은 개선됐지만 구매 전환이 크게 낮아짐.</li>
+            <li>CPA 12,659원 → 35,821원 (▲172.6%) — 광고 귀인 구매수 210 → 56건.</li>
             <li>예산 축소로 노출·클릭 모두 감소, 리타겟팅 볼륨 부족 가능성.</li>
             <li>이번주 콘텐츠 라이브 없음 → 지난주 라이브 효과 소멸 영향.</li>
           </ul>
@@ -757,10 +753,10 @@ tr.row-hl td { font-weight: 800; background: #fff; }
             <table>
               <thead><tr><th>지표</th><th>지난주 4/13~19</th><th>이번주 4/20~4/23</th><th>지난주 대비</th></tr></thead>
               <tbody>
-                <tr><td>비용</td><td>2,658,372원</td><td>1,932,093원</td><td><span class="tag-dn">▼ 27.3%</span></td></tr>
-                <tr><td>노출수</td><td>179,514회</td><td>120,084회</td><td><span class="tag-dn">▼ 33.1%</span></td></tr>
-                <tr><td>클릭수</td><td>4,536회</td><td>3,567회</td><td><span class="tag-dn">▼ 21.4%</span></td></tr>
-                <tr class="row-hl"><td>구매수(Meta귀인)</td><td>210건</td><td>56건</td><td><span class="tag-dn">▼ 73.3%</span></td></tr>
+                <tr><td>비용</td><td>2,658,372원</td><td>2,614,902원</td><td><span class="tag-dn">▼ 27.3%</span></td></tr>
+                <tr><td>노출수</td><td>179,514회</td><td>161,162회</td><td><span class="tag-dn">▼ 33.1%</span></td></tr>
+                <tr><td>클릭수</td><td>4,536회</td><td>4,613회</td><td><span class="tag-dn">▼ 21.4%</span></td></tr>
+                <tr class="row-hl"><td>구매수(Meta귀인)</td><td>210건</td><td>73건</td><td><span class="tag-dn">▼ 73.3%</span></td></tr>
               </tbody>
             </table>
             <div style="margin-top:14px;">
@@ -784,9 +780,9 @@ tr.row-hl td { font-weight: 800; background: #fff; }
             <table>
               <thead><tr><th>지표</th><th>지난주 4/13~19</th><th>이번주 4/20~4/23</th><th>지난주 대비</th></tr></thead>
               <tbody>
-                <tr><td>CPM</td><td>14,809원</td><td>16,090원</td><td><span class="tag-dn">▲ 8.6%</span></td></tr>
-                <tr><td>CTR</td><td>2.53%</td><td>2.97%</td><td><span class="tag-up">▲ 17.4%</span></td></tr>
-                <tr class="row-hl"><td>CPA</td><td>12,659원</td><td>34,502원</td><td><span class="tag-dn">▲ 172.6%</span></td></tr>
+                <tr><td>CPM</td><td>14,809원</td><td>16,225원</td><td><span class="tag-dn">▲ 8.6%</span></td></tr>
+                <tr><td>CTR</td><td>2.53%</td><td>2.86%</td><td><span class="tag-up">▲ 17.4%</span></td></tr>
+                <tr class="row-hl"><td>CPA</td><td>12,659원</td><td>35,821원</td><td><span class="tag-dn">▲ 172.6%</span></td></tr>
               </tbody>
             </table>
             <div style="margin-top:14px;">
@@ -821,35 +817,78 @@ tr.row-hl td { font-weight: 800; background: #fff; }
   <div class="card">
     <div class="card-title">릴렉스틱 소재 성과 비교 — 이번주 vs 지난주</div>
 
-            <div class="cr-tabs" id="cr-tabs-main">
-      <button class="cr-tab active" onclick="selectCreative(0)">공홈특가_일반</button>
-      <button class="cr-tab" onclick="selectCreative(1)">판매 1위_일반</button>
-      <button class="cr-tab" onclick="selectCreative(2)">고조선_일반_1 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(3)">타이밍_일반_1</button>
-      <button class="cr-tab" onclick="selectCreative(4)">타이밍은지금_일반</button>
-      <button class="cr-tab" onclick="selectCreative(5)">온몸이뭉친사람_일반</button>
-      <button class="cr-tab" onclick="selectCreative(6)">런닝10km_랜딩페이지 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(7)">고조선_일반_2 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(8)">쇼호스트_일반</button>
-      <button class="cr-tab" onclick="selectCreative(9)">릴렉스틱/릴렉스틱볼/올 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(10)">온몸이_일반_2</button>
-      <button class="cr-tab" onclick="selectCreative(11)">루피/윤쓰_파트너십 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(12)">루피/김채린_파트너십 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(13)">1초극락_단일영상_가로 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(14)">포맷_1번_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(15)">1초극락_단일영상_세로 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(16)">압도적_시원함_가로_일 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(17)">힐링템_가로_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(18)">포맷_2번_분할_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(19)">압도적_시원함_세로_일 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(20)">힐링템_세로_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(21)">4주년 생일파티_일반 ⏸</button>
-      <button class="cr-tab" onclick="selectCreative(22)">77% 할인_일반_1 ⏸</button>
-      <button class="cr-tab" onclick="selectCreative(23)">릴렉스틱 77%_일반_ ⏸</button>
-      <button class="cr-tab" onclick="selectCreative(24)">마감특가_종아리_일반_ ⏸</button>
-      <button class="cr-tab" onclick="selectCreative(25)">마감특가_여성승모_일반 ⏸</button>
-      <button class="cr-tab" onclick="selectCreative(26)">릴렉스틱/릴렉스틱볼/올 ⏸</button>
+            <div class="cr-camp-bar">
+      <button class="cr-camp-btn active" onclick="selectCampaign(0)">테스트_세트</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(1)">고조선</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(2)">테스트_오리지널</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(3)">위너_남자</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(4)">런닝_관심사타겟(트)</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(5)">쇼호스트</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(6)">가정의달 페스타</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(7)">헤임타(트)</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(8)">종아리</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(9)">4주년 생일파티</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(10)">위너</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(11)">4주년(트)</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(12)">테스트_롱버전</button>
+      <button class="cr-camp-btn" onclick="selectCampaign(13)">4주년</button>
     </div>
+    <div class="cr-camp-group active" id="cg-0">
+      <button class="cr-tab active" onclick="selectCreative(0,this)">공홈특가_일반</button>
+      <button class="cr-tab" onclick="selectCreative(1,this)">판매 1위_일반</button>
+    </div>
+    <div class="cr-camp-group" id="cg-1" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(2,this)">고조선_일반_1 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(7,this)">고조선_일반_2 🆕</button>
+    </div>
+    <div class="cr-camp-group" id="cg-2" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(3,this)">타이밍은지금_일반</button>
+      <button class="cr-tab" onclick="selectCreative(6,this)">온몸이뭉친사람_일반</button>
+    </div>
+    <div class="cr-camp-group" id="cg-3" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(4,this)">타이밍_일반_1</button>
+      <button class="cr-tab" onclick="selectCreative(11,this)">온몸이_일반_2</button>
+    </div>
+    <div class="cr-camp-group" id="cg-4" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(5,this)">런닝10km_랜딩페이지 🆕</button>
+    </div>
+    <div class="cr-camp-group" id="cg-5" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(8,this)">쇼호스트_일반</button>
+    </div>
+    <div class="cr-camp-group" id="cg-6" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(9,this)">릴렉스틱/릴렉스틱볼/올 🆕</button>
+    </div>
+    <div class="cr-camp-group" id="cg-7" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(10,this)">루피/윤쓰_파트너십 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(12,this)">루피/김채린_파트너십 🆕</button>
+    </div>
+    <div class="cr-camp-group" id="cg-8" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(13,this)">1초극락_단일영상_가로 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(14,this)">압도적_시원함_가로_일 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(15,this)">1초극락_단일영상_세로 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(16,this)">힐링템_가로_일반 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(17,this)">포맷_1번_일반 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(18,this)">포맷_2번_분할_일반 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(19,this)">힐링템_세로_일반 🆕</button>
+      <button class="cr-tab" onclick="selectCreative(20,this)">압도적_시원함_세로_일 🆕</button>
+    </div>
+    <div class="cr-camp-group" id="cg-9" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(21,this)">4주년 생일파티_일반 ⏸</button>
+    </div>
+    <div class="cr-camp-group" id="cg-10" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(22,this)">77% 할인_일반_1 ⏸</button>
+    </div>
+    <div class="cr-camp-group" id="cg-11" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(23,this)">릴렉스틱 77%_일반_ ⏸</button>
+    </div>
+    <div class="cr-camp-group" id="cg-12" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(24,this)">마감특가_종아리_일반_ ⏸</button>
+      <button class="cr-tab" onclick="selectCreative(25,this)">마감특가_여성승모_일반 ⏸</button>
+    </div>
+    <div class="cr-camp-group" id="cg-13" style="display:none">
+      <button class="cr-tab" onclick="selectCreative(26,this)">릴렉스틱/릴렉스틱볼/올 ⏸</button>
+    </div>
+
 
     <!-- 패널 0: 공홈특가 -->
         <!-- 패널 0: 77% 할인_일반_1 -->
@@ -858,18 +897,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 360,235원</div><div class="cr-kpi-curr">532,954원</div><span class="tag-up">▲ 47.9%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 22,470회</div><div class="cr-kpi-curr">37,075회</div><span class="tag-up">▲ 65.0%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 604회</div><div class="cr-kpi-curr">885회</div><span class="tag-up">▲ 46.5%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 45건</div><div class="cr-kpi-curr">17건</div><span class="tag-dn">▼ 62.2%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.18회</div><div class="cr-kpi-curr">1.21회</div><span class="tag-dn">▲ 2.5%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 360,235원</div><div class="cr-kpi-curr">736,412원</div><span class="tag-up">▲ 104.4%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 22,470회</div><div class="cr-kpi-curr">50,090회</div><span class="tag-up">▲ 122.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 604회</div><div class="cr-kpi-curr">1,154회</div><span class="tag-up">▲ 91.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 45건</div><div class="cr-kpi-curr">24건</div><span class="tag-dn">▼ 46.7%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.18회</div><div class="cr-kpi-curr">1.22회</div><span class="tag-dn">▲ 3.4%</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 16,032원</div><div class="cr-kpi-curr">14,375원</div><span class="tag-up">▼ 10.3%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 596원</div><div class="cr-kpi-curr">602원</div><span class="tag-dn">▲ 1.0%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.69%</div><div class="cr-kpi-curr">2.39%</div><span class="tag-dn">▼ 11.2%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 8,005원</div><div class="cr-kpi-curr">31,350원</div><span class="tag-dn">▲ 291.6%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 16,032원</div><div class="cr-kpi-curr">14,702원</div><span class="tag-up">▼ 8.3%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 596원</div><div class="cr-kpi-curr">638원</div><span class="tag-dn">▲ 7.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.69%</div><div class="cr-kpi-curr">2.30%</div><span class="tag-dn">▼ 14.5%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 8,005원</div><div class="cr-kpi-curr">30,684원</div><span class="tag-dn">▲ 283.3%</span></div>
       </div>
     </div>
     <!-- 패널 1: 릴렉스틱/릴렉스틱볼_영상_판매 1위_일반 -->
@@ -877,18 +916,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 145,128원</div><div class="cr-kpi-curr">484,808원</div><span class="tag-up">▲ 234.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 9,166회</div><div class="cr-kpi-curr">26,593회</div><span class="tag-up">▲ 190.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 234회</div><div class="cr-kpi-curr">691회</div><span class="tag-up">▲ 195.3%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 11건</div><div class="cr-kpi-curr">15건</div><span class="tag-up">▲ 36.4%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.13회</div><div class="cr-kpi-curr">1.20회</div><span class="tag-dn">▲ 6.2%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 145,128원</div><div class="cr-kpi-curr">686,529원</div><span class="tag-up">▲ 373.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 9,166회</div><div class="cr-kpi-curr">37,421회</div><span class="tag-up">▲ 308.3%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 234회</div><div class="cr-kpi-curr">924회</div><span class="tag-up">▲ 294.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 11건</div><div class="cr-kpi-curr">21건</div><span class="tag-up">▲ 90.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.13회</div><div class="cr-kpi-curr">1.21회</div><span class="tag-dn">▲ 7.1%</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 15,833원</div><div class="cr-kpi-curr">18,231원</div><span class="tag-dn">▲ 15.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 620원</div><div class="cr-kpi-curr">702원</div><span class="tag-dn">▲ 13.2%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.55%</div><div class="cr-kpi-curr">2.60%</div><span class="tag-up">▲ 2.0%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 13,193원</div><div class="cr-kpi-curr">32,321원</div><span class="tag-dn">▲ 145.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 15,833원</div><div class="cr-kpi-curr">18,346원</div><span class="tag-dn">▲ 15.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 620원</div><div class="cr-kpi-curr">743원</div><span class="tag-dn">▲ 19.8%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.55%</div><div class="cr-kpi-curr">2.47%</div><span class="tag-dn">▼ 3.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 13,193원</div><div class="cr-kpi-curr">32,692원</div><span class="tag-dn">▲ 147.8%</span></div>
       </div>
     </div>
     <!-- 패널 2: 릴렉스틱_영상_고조선_일반_1 -->
@@ -896,60 +935,79 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">162,610원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">5,738회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">155회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2건</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">233,922원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">7,930회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">213회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">4건</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.17회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">28,339원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,049원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.70%</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">81,305원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">29,498원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,098원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.69%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">58,480원</div><span class="tag-up">🆕 신규</span></div>
       </div>
     </div>
-    <!-- 패널 3: 릴렉스틱_영상_타이밍_일반_1 -->
+    <!-- 패널 3: 릴렉스틱_영상_타이밍은지금_일반 -->
     <div class="cr-panel" id="crp-3">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 207,963원</div><div class="cr-kpi-curr">156,089원</div><span class="tag-dn">▼ 24.9%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 13,383회</div><div class="cr-kpi-curr">8,686회</div><span class="tag-dn">▼ 35.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 281회</div><div class="cr-kpi-curr">245회</div><span class="tag-dn">▼ 12.8%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 227,485원</div><div class="cr-kpi-curr">193,170원</div><span class="tag-dn">▼ 15.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 16,614회</div><div class="cr-kpi-curr">14,076회</div><span class="tag-dn">▼ 15.3%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 339회</div><div class="cr-kpi-curr">297회</div><span class="tag-dn">▼ 12.4%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 27건</div><div class="cr-kpi-curr">8건</div><span class="tag-dn">▼ 70.4%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.10회</div><div class="cr-kpi-curr">1.08회</div><span class="tag-up">▼ 1.8%</span></div>
+      </div>
+      <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
+      <div class="cr-kpi-row cols4">
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 13,692원</div><div class="cr-kpi-curr">13,723원</div><span class="tag-dn">▲ 0.2%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 671원</div><div class="cr-kpi-curr">650원</div><span class="tag-up">▼ 3.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.04%</div><div class="cr-kpi-curr">2.11%</div><span class="tag-up">▲ 3.4%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 8,425원</div><div class="cr-kpi-curr">24,146원</div><span class="tag-dn">▲ 186.6%</span></div>
+      </div>
+    </div>
+    <!-- 패널 4: 릴렉스틱_영상_타이밍_일반_1 -->
+    <div class="cr-panel" id="crp-4">
+      <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
+      <div class="cr-subsec">볼륨 지표</div>
+      <div class="cr-kpi-row">
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 207,963원</div><div class="cr-kpi-curr">179,315원</div><span class="tag-dn">▼ 13.8%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 13,383회</div><div class="cr-kpi-curr">10,301회</div><span class="tag-dn">▼ 23.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 281회</div><div class="cr-kpi-curr">284회</div><span class="tag-up">▲ 1.1%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 14건</div><div class="cr-kpi-curr">6건</div><span class="tag-dn">▼ 57.1%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.12회</div><div class="cr-kpi-curr">1.11회</div><span class="tag-up">▼ 0.9%</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 15,539원</div><div class="cr-kpi-curr">17,970원</div><span class="tag-dn">▲ 15.6%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 740원</div><div class="cr-kpi-curr">637원</div><span class="tag-up">▼ 13.9%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.10%</div><div class="cr-kpi-curr">2.82%</div><span class="tag-up">▲ 34.3%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 14,854원</div><div class="cr-kpi-curr">26,015원</div><span class="tag-dn">▲ 75.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 15,539원</div><div class="cr-kpi-curr">17,408원</div><span class="tag-dn">▲ 12.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 740원</div><div class="cr-kpi-curr">631원</div><span class="tag-up">▼ 14.7%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.10%</div><div class="cr-kpi-curr">2.76%</div><span class="tag-up">▲ 31.4%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 14,854원</div><div class="cr-kpi-curr">29,886원</div><span class="tag-dn">▲ 101.2%</span></div>
       </div>
     </div>
-    <!-- 패널 4: 릴렉스틱_영상_타이밍은지금_일반 -->
-    <div class="cr-panel" id="crp-4">
+    <!-- 패널 5: 릴렉스틱_영상_런닝10km_랜딩페이지조회수_일반 -->
+    <div class="cr-panel" id="crp-5">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 227,485원</div><div class="cr-kpi-curr">143,212원</div><span class="tag-dn">▼ 37.0%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 16,614회</div><div class="cr-kpi-curr">10,457회</div><span class="tag-dn">▼ 37.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 339회</div><div class="cr-kpi-curr">235회</div><span class="tag-dn">▼ 30.7%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 27건</div><div class="cr-kpi-curr">7건</div><span class="tag-dn">▼ 74.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.10회</div><div class="cr-kpi-curr">1.10회</div><span class="tag-dn">▲ 0.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">109,441원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">16,655회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,126회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.04회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 13,692원</div><div class="cr-kpi-curr">13,695원</div><span class="tag-dn">▲ 0.0%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 671원</div><div class="cr-kpi-curr">609원</div><span class="tag-up">▼ 9.2%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.04%</div><div class="cr-kpi-curr">2.25%</div><span class="tag-up">▲ 10.3%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 8,425원</div><div class="cr-kpi-curr">20,459원</div><span class="tag-dn">▲ 142.8%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6,571원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">97원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6.76%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 5: 릴렉스틱_영상_온몸이뭉친사람_일반 -->
-    <div class="cr-panel" id="crp-5">
+    <!-- 패널 6: 릴렉스틱_영상_온몸이뭉친사람_일반 -->
+    <div class="cr-panel" id="crp-6">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
@@ -967,42 +1025,23 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 14,412원</div><div class="cr-kpi-curr">34,127원</div><span class="tag-dn">▲ 136.8%</span></div>
       </div>
     </div>
-    <!-- 패널 6: 릴렉스틱_영상_런닝10km_랜딩페이지조회수_일반 -->
-    <div class="cr-panel" id="crp-6">
-      <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
-      <div class="cr-subsec">볼륨 지표</div>
-      <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">83,972원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">12,715회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">873회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.04회</div><span class="tag-up">🆕 신규</span></div>
-      </div>
-      <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
-      <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6,604원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">96원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6.87%</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-      </div>
-    </div>
     <!-- 패널 7: 릴렉스틱_영상_고조선_일반_2 -->
     <div class="cr-panel" id="crp-7">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">70,490원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,858회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">66회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.12회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">90,656원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3,567회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">82회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1건</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.13회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">24,664원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,068원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.31%</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">25,415원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,106원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.30%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">90,656원</div><span class="tag-up">🆕 신규</span></div>
       </div>
     </div>
     <!-- 패널 8: 릴렉스틱_영상_쇼호스트_일반 -->
@@ -1010,18 +1049,18 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 51,302원</div><div class="cr-kpi-curr">69,918원</div><span class="tag-up">▲ 36.3%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 2,417회</div><div class="cr-kpi-curr">2,954회</div><span class="tag-up">▲ 22.2%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 79회</div><div class="cr-kpi-curr">83회</div><span class="tag-up">▲ 5.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 51,302원</div><div class="cr-kpi-curr">85,065원</div><span class="tag-up">▲ 65.8%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 2,417회</div><div class="cr-kpi-curr">4,087회</div><span class="tag-up">▲ 69.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 79회</div><div class="cr-kpi-curr">100회</div><span class="tag-up">▲ 26.6%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 7건</div><div class="cr-kpi-curr">2건</div><span class="tag-dn">▼ 71.4%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.10회</div><div class="cr-kpi-curr">1.11회</div><span class="tag-dn">▲ 0.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 1.10회</div><div class="cr-kpi-curr">1.10회</div><span class="tag-dn">▲ 0.0%</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 21,225원</div><div class="cr-kpi-curr">23,669원</div><span class="tag-dn">▲ 11.5%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 649원</div><div class="cr-kpi-curr">842원</div><span class="tag-dn">▲ 29.7%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 3.27%</div><div class="cr-kpi-curr">2.81%</div><span class="tag-dn">▼ 14.1%</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 7,329원</div><div class="cr-kpi-curr">34,959원</div><span class="tag-dn">▲ 377.0%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 21,225원</div><div class="cr-kpi-curr">20,814원</div><span class="tag-up">▼ 1.9%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 649원</div><div class="cr-kpi-curr">851원</div><span class="tag-dn">▲ 31.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 3.27%</div><div class="cr-kpi-curr">2.45%</div><span class="tag-dn">▼ 25.1%</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 7,329원</div><div class="cr-kpi-curr">42,532원</div><span class="tag-dn">▲ 480.3%</span></div>
       </div>
     </div>
     <!-- 패널 9: 릴렉스틱/릴렉스틱볼/올인원마사지기/EMS손목마사지기/EMS허리마사지기/이벤트페이지_영상_가정의달 페스타 폴라로이드_일반 -->
@@ -1029,22 +1068,41 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">33,155원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,877회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">56회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">51,061원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3,065회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">75회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.17회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.14회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">17,664원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">592원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.98%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">16,659원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">681원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.45%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 10: 릴렉스틱_영상_온몸이_일반_2 -->
+    <!-- 패널 10: 릴렉스틱오리지널-루피/릴렉스틱볼-루피_영상_윤쓰_파트너십 -->
     <div class="cr-panel" id="crp-10">
+      <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
+      <div class="cr-subsec">볼륨 지표</div>
+      <div class="cr-kpi-row">
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">32,339원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,626회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">64회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.47회</div><span class="tag-up">🆕 신규</span></div>
+      </div>
+      <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
+      <div class="cr-kpi-row cols4">
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">19,889원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">505원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3.94%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+      </div>
+    </div>
+    <!-- 패널 11: 릴렉스틱_영상_온몸이_일반_2 -->
+    <div class="cr-panel" id="crp-11">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
@@ -1062,41 +1120,22 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 14,955원</div><div class="cr-kpi-curr">24,781원</div><span class="tag-dn">▲ 65.7%</span></div>
       </div>
     </div>
-    <!-- 패널 11: 릴렉스틱오리지널-루피/릴렉스틱볼-루피_영상_윤쓰_파트너십 -->
-    <div class="cr-panel" id="crp-11">
-      <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
-      <div class="cr-subsec">볼륨 지표</div>
-      <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">22,595원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,400회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">36회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.40회</div><span class="tag-up">🆕 신규</span></div>
-      </div>
-      <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
-      <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">16,139원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">628원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.57%</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-      </div>
-    </div>
     <!-- 패널 12: 릴렉스틱오리지널-루피/릴렉스틱볼-루피_영상_김채린_파트너십 -->
     <div class="cr-panel" id="crp-12">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">22,232원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,475회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">43회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">22,710원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,487회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">44회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.05회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.06회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">15,073원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">517원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.92%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">15,272원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">516원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.96%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
@@ -1105,36 +1144,36 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6,474원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">461회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">11회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">16,692원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,056회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">19회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.05회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.06회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">14,043원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">589원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.39%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">15,807원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">879원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.80%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 14: 릴렉스틱_영상_포맷_1번_일반 -->
+    <!-- 패널 14: 릴렉스틱_영상_압도적_시원함_가로_일반 -->
     <div class="cr-panel" id="crp-14">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">4,053원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">274회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">5회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">14,448원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">840회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">15회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.05회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.07회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">14,792원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">811원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.82%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">17,200원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">963원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.79%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
@@ -1143,55 +1182,55 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3,746원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">163회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">7회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">10,797원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">498회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">15회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.06회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.09회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">22,982원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">535원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">4.29%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">21,681원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">720원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3.01%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 16: 릴렉스틱_영상_압도적_시원함_가로_일반 -->
+    <!-- 패널 16: 릴렉스틱_영상_힐링템_가로_일반 -->
     <div class="cr-panel" id="crp-16">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,471원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">141회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">9,288원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">631회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">17회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.02회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.07회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">17,525원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">824원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.13%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">14,719원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">546원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.69%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 17: 릴렉스틱_영상_힐링템_가로_일반 -->
+    <!-- 패널 17: 릴렉스틱_영상_포맷_1번_일반 -->
     <div class="cr-panel" id="crp-17">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,359원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">169회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">5회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">9,056원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">637회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">11회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.05회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">13,959원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">472원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.96%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">14,217원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">823원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.73%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
@@ -1200,55 +1239,55 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,459원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">70회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,535원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">138회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.01회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.04회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">20,843원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,459원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.43%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">18,370원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">845원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.17%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 19: 릴렉스틱_영상_압도적_시원함_세로_일반 -->
+    <!-- 패널 19: 릴렉스틱_영상_힐링템_세로_일반 -->
     <div class="cr-panel" id="crp-19">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,396원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">65회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,302원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">119회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.03회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">21,477원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">19,345원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,302원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">0.84%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
-    <!-- 패널 20: 릴렉스틱_영상_힐링템_세로_일반 -->
+    <!-- 패널 20: 릴렉스틱_영상_압도적_시원함_세로_일반 -->
     <div class="cr-panel" id="crp-20">
       <div style="font-size:11px;color:#94a3b8;font-weight:600;margin-bottom:12px;">지난주(4/13~19) 대비</div>
       <div class="cr-subsec">볼륨 지표</div>
       <div class="cr-kpi-row">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">938원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">70회</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">비용</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2,002원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">노출</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">95회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">클릭</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3회</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">구매수</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.01회</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">빈도</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.06회</div><span class="tag-up">🆕 신규</span></div>
       </div>
       <div class="cr-subsec" style="margin-top:16px;">효율 지표</div>
       <div class="cr-kpi-row cols4">
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">13,400원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">938원</div><span class="tag-up">🆕 신규</span></div>
-        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.43%</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPM</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">21,074원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">667원</div><span class="tag-up">🆕 신규</span></div>
+        <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3.16%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
     </div>
@@ -1472,8 +1511,8 @@ const COST_DATA = {
   apr24: {
     meta: [178535, 195884, 194794, 175063, 214636, 324585, 307776, 262302, 349301, 367078, 343709, 392759, 354810, 395969, 392410, 431800, 337217, 170242, 260150, 143446, 316699, 483133, 455068, 466789],
     searchad: [482164, 489512, 475147, 396399, 450603, 516778, 534765, 466731, 529038, 462637, 490963, 497237, 530372, 502076, 551338, 497855, 501343, 451553, 500573, 541192, 517497, 499354, 560409, 547591],
-    gfa: [444142, 435913, 363030, 340469, 340538, 382821, 387528, 638757, 1136282, 1288108, 950153, 732137, 690952, 733219, 628513, 387639, 283090, 303159, 308186, 453414, 878862, 452940, 303393, 0],
-    advoost: [535750, 437293, 594854, 454063, 599397, 613943, 513239, 289944, 195942, 295020, 212920, 278724, 374867, 919556, 588292, 283162, 425817, 245417, 404879, 360970, 491220, 505431, 382006, 0],
+    gfa: [444142, 435913, 363030, 340469, 340538, 382821, 387528, 638757, 1136282, 1288108, 950153, 732137, 690952, 733219, 628513, 387639, 283090, 303159, 308186, 453414, 878862, 452940, 303393, 291116],
+    advoost: [535750, 437293, 594854, 454063, 599397, 613943, 513239, 289944, 195942, 295020, 212920, 278724, 374867, 919556, 588292, 283162, 425817, 245417, 404879, 360970, 491220, 505431, 382006, 543731],
     google: [0, 0, 0, 0, 0, 0, 23002, 310928, 276077, 453180, 307331, 374471, 309460, 333055, 276705, 104723, 104168, 106103, 101601, 102868, 102464, 103945, 103187, 102418],
   },
   mar_same: {
@@ -1547,7 +1586,7 @@ const DAY_LABELS_19 = ['1','2','3','4','5','6','7','8','9','10','11','12','13','
 
 const D2 = {
   mar: { sales:[6437798, 4873470, 5349037, 4432013, 6229358, 4479685, 4438880, 4960410, 5795553, 5088019, 4426984, 6511860, 5176775, 4695353, 5651825, 5182076, 5763034, 5711332, 6016708, 5190350, 4668190, 4637202, 6865131, 5963826], cost:[1543567, 1094682, 1055711, 1131493, 1062810, 1029099, 1142590, 1049782, 1277229, 1111851, 1415135, 1314154, 1344083, 1624118, 1743409, 1417112, 1615381, 1640110, 1651147, 1705662, 1831725, 1766665, 1811485, 1952708], roas:[417, 445, 507, 392, 586, 435, 388, 473, 454, 458, 313, 496, 385, 289, 324, 366, 357, 348, 364, 304, 255, 262, 379, 305] },
-  apr: { sales:[7205963, 6027943, 4176453, 4269679, 4335814, 5459088, 5332409, 7728352, 5726413, 5779212, 5860830, 6532550, 6798224, 7186947, 5888185, 6224204, 7867344, 7339279, 8055860, 6727969, 6241861, 5818558, 5916514, 0], cost:[1640591, 1558602, 1627825, 1365994, 1605174, 1838127, 1766310, 1968662, 2486640, 2866023, 2305076, 2275328, 2260461, 2883875, 2437258, 1705179, 1651635, 1276474, 1575389, 1601890, 2306742, 2044803, 1804063, 1116798], roas:[439, 387, 257, 313, 270, 297, 302, 393, 230, 202, 254, 287, 301, 249, 242, 365, 476, 575, 511, 420, 271, 285, 328, 0] },
+  apr: { sales:[7205963, 6027943, 4176453, 4269679, 4335814, 5459088, 5332409, 7728352, 5726413, 5779212, 5860830, 6532550, 6798224, 7186947, 5888185, 6224204, 7867344, 7339279, 8055860, 6727969, 6241861, 5818558, 5916514, 6285792], cost:[1640591, 1558602, 1627825, 1365994, 1605174, 1838127, 1766310, 1968662, 2486640, 2866023, 2305076, 2275328, 2260461, 2883875, 2437258, 1705179, 1651635, 1276474, 1575389, 1601890, 2306742, 2044803, 1804063, 1951645], roas:[439, 387, 257, 313, 270, 297, 302, 393, 230, 202, 254, 287, 301, 249, 242, 365, 476, 575, 511, 420, 271, 285, 328, 322] },
 };
 const D_MS = {
   전월동일: { sales:[5190350, 4668190, 4637202, 6865131], cost:[1705662, 1831725, 1766665, 1811485], roas:[304, 255, 262, 379] },
@@ -1590,10 +1629,10 @@ function switchNaverPanel(idx, btn) {
 
 // ── 메타 볼륨 탭 차트 ──
 const META_VOL_METRICS = [
-  { label:'비용',  data:[2658372, 1932093], fmt:'won' },
-  { label:'노출',  data:[179514,  120084],  fmt:'num' },
-  { label:'클릭',  data:[4536,    3567],    fmt:'num' },
-  { label:'구매',  data:[210,     56],     fmt:'num' },
+  { label:'비용',  data:[2658372, 2614902], fmt:'won' },
+  { label:'노출',  data:[179514,  161162],  fmt:'num' },
+  { label:'클릭',  data:[4536,    4613],    fmt:'num' },
+  { label:'구매',  data:[210,     73],     fmt:'num' },
 ];
 let metaVolIdx = 0;
 let metaVolChart = null;
@@ -1637,9 +1676,9 @@ function switchMetaVol(idx) {
     data: {
       labels: ['지난주 4/13~19', '이번주 4/20~4/23'],
       datasets: [
-        { type:'bar',  label:'CPM (원)', data:[14809,16090], backgroundColor:['rgba(99,102,241,0.6)','rgba(99,102,241,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
-        { type:'bar',  label:'CPA (원)', data:[12659,34502], backgroundColor:['rgba(245,158,11,0.6)','rgba(245,158,11,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
-        { type:'line', label:'CTR (%)',  data:[2.53,2.97],   borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.1)', borderWidth:2.5, pointRadius:5, pointBackgroundColor:'#10b981', tension:0, yAxisID:'y2', order:1 },
+        { type:'bar',  label:'CPM (원)', data:[14809,16225], backgroundColor:['rgba(99,102,241,0.6)','rgba(99,102,241,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
+        { type:'bar',  label:'CPA (원)', data:[12659,35821], backgroundColor:['rgba(245,158,11,0.6)','rgba(245,158,11,1)'], borderRadius:5, yAxisID:'y', order:2, barPercentage:0.5, categoryPercentage:0.6 },
+        { type:'line', label:'CTR (%)',  data:[2.53,2.86],   borderColor:'#10b981', backgroundColor:'rgba(16,185,129,0.1)', borderWidth:2.5, pointRadius:5, pointBackgroundColor:'#10b981', tension:0, yAxisID:'y2', order:1 },
       ]
     },
     options: {
@@ -1659,13 +1698,13 @@ function switchMetaVol(idx) {
 })();
 
 // ── 소재별 통합 비교 차트 ──
-const CR_LABELS = ["공홈특가_일반", "판매 1위_일반", "고조선_일반_1", "타이밍_일반_1", "타이밍은지금_일반", "온몸이뭉친사람_일반", "런닝10km_랜딩페이지", "고조선_일반_2", "쇼호스트_일반", "릴렉스틱/릴렉스틱볼/올", "온몸이_일반_2", "루피/윤쓰_파트너십", "루피/김채린_파트너십", "1초극락_단일영상_가로", "포맷_1번_일반", "1초극락_단일영상_세로", "압도적_시원함_가로_일", "힐링템_가로_일반", "포맷_2번_분할_일반", "압도적_시원함_세로_일", "힐링템_세로_일반", "4주년 생일파티_일반", "77% 할인_일반_1", "릴렉스틱 77%_일반_", "마감특가_종아리_일반_", "마감특가_여성승모_일반", "릴렉스틱/릴렉스틱볼/올"];
+const CR_LABELS = ["공홈특가_일반", "판매 1위_일반", "고조선_일반_1", "타이밍은지금_일반", "타이밍_일반_1", "런닝10km_랜딩페이지", "온몸이뭉친사람_일반", "고조선_일반_2", "쇼호스트_일반", "릴렉스틱/릴렉스틱볼/올", "루피/윤쓰_파트너십", "온몸이_일반_2", "루피/김채린_파트너십", "1초극락_단일영상_가로", "압도적_시원함_가로_일", "1초극락_단일영상_세로", "힐링템_가로_일반", "포맷_1번_일반", "포맷_2번_분할_일반", "힐링템_세로_일반", "압도적_시원함_세로_일", "4주년 생일파티_일반", "77% 할인_일반_1", "릴렉스틱 77%_일반_", "마감특가_종아리_일반_", "마감특가_여성승모_일반", "릴렉스틱/릴렉스틱볼/올"];
 const CR_DATA = {
-  cost:  { last:[532954, 484808, 162610, 156089, 143212, 102381, 83972, 70490, 69918, 33155, 24781, 22595, 22232, 6474, 4053, 3746, 2471, 2359, 1459, 1396, 938, 0, 0, 0, 0, 0, 0], prev:[360235, 145128, 0, 207963, 227485, 230592, 0, 0, 51302, 0, 59819, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100343, 270173, 120180, 171641, 33180, 84124] },
-  imp:   { last:[37075, 26593, 5738, 8686, 10457, 5529, 12715, 2858, 2954, 1877, 1314, 1400, 1475, 461, 274, 163, 141, 169, 70, 65, 70, 0, 0, 0, 0, 0, 0],  prev:[22470, 9166, 0, 13383, 16614, 16837, 0, 0, 2417, 0, 5629, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4873, 18742, 15448, 8729, 1920, 2895] },
-  clicks:{ last:[885, 691, 155, 245, 235, 117, 873, 66, 83, 56, 49, 36, 43, 11, 5, 7, 3, 5, 1, 0, 1, 0, 0, 0, 0, 0, 0],  prev:[604, 234, 0, 281, 339, 203, 0, 0, 79, 0, 67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 99, 549, 755, 194, 45, 91] },
-  pur:   { last:[17, 15, 2, 6, 7, 3, 0, 0, 2, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0],  prev:[45, 11, 0, 14, 27, 16, 0, 0, 7, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 24, 1, 13, 5, 5] },
-  cpa:   { last:[31350, 32321, 81305, 26015, 20459, 34127, 0, 0, 34959, 0, 24781, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  prev:[8005, 13193, 0, 14854, 8425, 14412, 0, 0, 7329, 0, 14955, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33448, 11257, 120180, 13203, 6636, 16825] },
+  cost:  { last:[736412, 686529, 233922, 193170, 179315, 109441, 102381, 90656, 85065, 51061, 32339, 24781, 22710, 16692, 14448, 10797, 9288, 9056, 2535, 2302, 2002, 0, 0, 0, 0, 0, 0], prev:[360235, 145128, 0, 227485, 207963, 0, 230592, 0, 51302, 0, 0, 59819, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100343, 270173, 120180, 171641, 33180, 84124] },
+  imp:   { last:[50090, 37421, 7930, 14076, 10301, 16655, 5529, 3567, 4087, 3065, 1626, 1314, 1487, 1056, 840, 498, 631, 637, 138, 119, 95, 0, 0, 0, 0, 0, 0],  prev:[22470, 9166, 0, 16614, 13383, 0, 16837, 0, 2417, 0, 0, 5629, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4873, 18742, 15448, 8729, 1920, 2895] },
+  clicks:{ last:[1154, 924, 213, 297, 284, 1126, 117, 82, 100, 75, 64, 49, 44, 19, 15, 15, 17, 11, 3, 1, 3, 0, 0, 0, 0, 0, 0],  prev:[604, 234, 0, 339, 281, 0, 203, 0, 79, 0, 0, 67, 0, 0, 0, 0, 0, 0, 0, 0, 0, 99, 549, 755, 194, 45, 91] },
+  pur:   { last:[24, 21, 4, 8, 6, 0, 3, 1, 2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0],  prev:[45, 11, 0, 27, 14, 0, 16, 0, 7, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 24, 1, 13, 5, 5] },
+  cpa:   { last:[30684, 32692, 58480, 24146, 29886, 0, 34127, 90656, 42532, 0, 0, 24781, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  prev:[8005, 13193, 0, 8425, 14854, 0, 14412, 0, 7329, 0, 0, 14955, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33448, 11257, 120180, 13203, 6636, 16825] },
 };
 
 
@@ -1714,9 +1753,17 @@ function switchCreativeMetric(idx) {
   buildCrChart(idx);
 }
 
-function selectCreative(idx) {
-  document.querySelectorAll('.cr-tab').forEach((b,i) => b.classList.toggle('active', i===idx));
-  document.querySelectorAll('.cr-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+function selectCampaign(ci){
+  document.querySelectorAll('.cr-camp-btn').forEach((b,i)=>b.classList.toggle('active',i===ci));
+  document.querySelectorAll('.cr-camp-group').forEach((g,i)=>{g.style.display=i===ci?'':'none';});
+  const first=document.querySelector('#cg-'+ci+' .cr-tab');
+  if(first)first.click();
+}
+function selectCreative(idx,btn){
+  document.querySelectorAll('.cr-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('crp-'+idx).classList.add('active');
+  btn.closest('.cr-camp-group').querySelectorAll('.cr-tab').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
 }
 
 buildCrChart(0);
