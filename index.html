@@ -1689,21 +1689,21 @@ function initCampChart(ci){
   const prev=info.idxs.map(i=>CR_DATA.cost.prev[i]);
   const ctx=document.getElementById('cc-canvas-'+ci).getContext('2d');
   _campCharts[ci]=new Chart(ctx,{
-    type:'bar',
+    type:'line',
     data:{
       labels:info.labels,
       datasets:[
-        {label:'이번주',data:last,backgroundColor:'rgba(99,102,241,0.85)',borderRadius:4},
-        {label:'지난주',data:prev,backgroundColor:'rgba(148,163,184,0.5)',borderRadius:4}
+        {label:'이번주',data:last,borderColor:'rgba(99,102,241,1)',backgroundColor:'rgba(99,102,241,0.1)',pointBackgroundColor:'rgba(99,102,241,1)',pointRadius:5,tension:0.3,fill:true},
+        {label:'지난주',data:prev,borderColor:'rgba(148,163,184,0.8)',backgroundColor:'rgba(148,163,184,0.05)',pointBackgroundColor:'rgba(148,163,184,0.8)',pointRadius:5,tension:0.3,fill:true}
       ]
     },
     options:{
-      indexAxis:'y',responsive:true,maintainAspectRatio:false,
+      responsive:true,maintainAspectRatio:false,
       plugins:{legend:{position:'top',labels:{font:{size:11},boxWidth:12}},
                tooltip:{callbacks:{label:v=>v.dataset.label+': '+v.raw.toLocaleString()+'원'}}},
       scales:{
-        x:{ticks:{callback:v=>v>=10000?(v/10000).toFixed(0)+'만원':v+'원',font:{size:10}},grid:{color:'#f1f5f9'}},
-        y:{ticks:{font:{size:11}},grid:{display:false}}
+        x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
+        y:{ticks:{callback:v=>v>=10000?(v/10000).toFixed(0)+'만원':v+'원',font:{size:10}},grid:{color:'#f1f5f9'}}
       }
     }
   });
