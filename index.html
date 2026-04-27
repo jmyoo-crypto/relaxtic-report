@@ -162,6 +162,7 @@ tr.row-hl td { font-weight: 800; background: #fff; }
 .cr-camp-group{display:none;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
 .cr-camp-group.active{display:flex;}
 .cr-camp-chart{margin-top:16px;padding:12px;background:#f8fafc;border-radius:10px;border:1px solid #e2e8f0;}
+.meta-front-panel{display:none;}.meta-front-panel.active{display:block;}
 .cr-tab {
   padding: 8px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0;
   background: #f8fafc; font-size: 13px; font-weight: 700; color: #64748b;
@@ -717,6 +718,68 @@ tr.row-hl td { font-weight: 800; background: #fff; }
   </div>
 
   <div class="card">
+    <div style="font-size:10px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#aaa;margin-bottom:12px;">📊 비교 기준 — 자사몰 매출 · 메타 광고비 · ROAS</div>
+    <div class="toggle-bar" id="meta-front-toggle">
+      <button class="toggle-btn active" onclick="switchMetaFront(0,this)">지난주 vs 지지난주</button>
+      <button class="toggle-btn" onclick="switchMetaFront(1,this)">4월 vs 3월</button>
+    </div>
+    <div class="meta-front-panel active" id="meta-front-0">
+      <div class="vs-header">
+        <div class="vs-badge vs-prev">지지난주 4/13~19</div>
+        <div class="vs-label">VS</div>
+        <div class="vs-badge vs-curr">지난주 4/20~26</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <div class="kpi-lbl">자사몰 매출</div>
+          <div class="kpi-prev">10,466,743원</div>
+          <div class="kpi-curr">6,025,175원</div>
+          <span class="tag-dn">▼ 42.4%</span>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-lbl">메타 광고비</div>
+          <div class="kpi-prev">2,342,598원</div>
+          <div class="kpi-curr">2,883,404원</div>
+          <span class="tag-up">▲ 23.1%</span>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-lbl">ROAS (메타→자사몰)</div>
+          <div class="kpi-prev">447%</div>
+          <div class="kpi-curr">209%</div>
+          <span class="tag-dn">▼ 53.2%</span>
+        </div>
+      </div>
+    </div>
+    <div class="meta-front-panel" id="meta-front-1">
+      <div class="vs-header">
+        <div class="vs-badge vs-prev-mo">3월 1일 ~ 24일</div>
+        <div class="vs-label">VS</div>
+        <div class="vs-badge vs-curr">4월 1일 ~ 26일</div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi-box">
+          <div class="kpi-lbl">자사몰 매출</div>
+          <div class="kpi-prev">11,344,579원</div>
+          <div class="kpi-curr">21,664,380원</div>
+          <span class="tag-up">▲ 91.0%</span>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-lbl">메타 광고비</div>
+          <div class="kpi-prev">5,660,889원</div>
+          <div class="kpi-curr">8,532,424원</div>
+          <span class="tag-up">▲ 50.7%</span>
+        </div>
+        <div class="kpi-box">
+          <div class="kpi-lbl">ROAS (메타→자사몰)</div>
+          <div class="kpi-prev">200%</div>
+          <div class="kpi-curr">254%</div>
+          <span class="tag-up">▲ 27.0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
     <div class="flow">
 
       <div class="flow-item">
@@ -726,10 +789,10 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         </div>
         <div class="flow-body">
           <div class="flow-tag">WHY — 현상</div>
-          <div class="flow-title">자사몰 매출이 지난주 대비 큰 폭으로 변동</div>
+          <div class="flow-title">자사몰 매출 6,025,175원 — 지지난주 대비 42.4% 감소</div>
           <div class="flow-text">
-            이번주(4일) <strong>2,074,672원</strong> &nbsp;←&nbsp; 지난주(7일) 10,644,211원.<br>
-            메타 광고비 ▼27.3% 축소 + 일수 차이(4일) 영향으로 자사몰 유입 감소.
+            지난주(4/20~26) <strong>6,025,175원</strong> &nbsp;←&nbsp; 지지난주(4/13~19) 10,466,743원.<br>
+            메타 광고비 23.1% 증가 — 광고 규모 변화에 따른 자사몰 유입 변동.
           </div>
         </div>
       </div>
@@ -1775,6 +1838,10 @@ function initCampChart(ci){
   });
 }
 window.addEventListener('load',()=>initCampChart(0));
+function switchMetaFront(idx,btn){
+  document.getElementById('meta-front-toggle').querySelectorAll('.toggle-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  document.querySelectorAll('.meta-front-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
+}
 
 buildCrChart(0);
 </script>
