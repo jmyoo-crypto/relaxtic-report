@@ -165,6 +165,10 @@ tr.row-hl td { font-weight: 800; background: #fff; }
 .meta-front-panel{display:none;}.meta-front-panel.active{display:block;}
 .mfc-btn{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;}
 .mfc-btn.active{background:#6366f1;color:#fff;border-color:#6366f1;}
+.cr-adset-bar{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:8px;padding:6px 0 2px;}
+.cr-adset-btn{background:#f8fafc;color:#64748b;border:1px solid #e2e8f0;padding:3px 10px;border-radius:14px;font-size:11px;cursor:pointer;transition:all .15s;}
+.cr-adset-btn.active{background:#6366f1;color:#fff;border-color:#6366f1;}
+.cr-adset-group{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px;}
 .cr-tab {
   padding: 8px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0;
   background: #f8fafc; font-size: 13px; font-weight: 700; color: #64748b;
@@ -1021,46 +1025,105 @@ tr.row-hl td { font-weight: 800; background: #fff; }
       <button class="cr-camp-btn" onclick="selectCampaign(9)">헤임타(트)</button>
     </div>
     <div class="cr-camp-group active" id="cg-0">
-      <button class="cr-tab active" onclick="selectCreative(0,this)">판매 1위_일반</button>
-      <button class="cr-tab" onclick="selectCreative(1,this)">공홈특가_일반</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn active" onclick="selectAdset(0,0,this)">2555_전체_맞춤타겟_1</button>
+        <button class="cr-adset-btn" onclick="selectAdset(0,1,this)">3055_여성_맞춤타겟_1</button>
+      </div>
+      <div class="cr-adset-group" id="ag-0-0">
+        <button class="cr-tab active" onclick="selectCreative(0,this)">판매 1위_일반</button>
+      </div>
+      <div class="cr-adset-group" id="ag-0-1" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(1,this)">공홈특가_일반</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-1" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(2,this)">고조선_일반_1 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(5,this)">고조선_일반_2 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(1,0,this)">2565+_여성_어드밴티지_1(구매_30일제외)</button>
+        <button class="cr-adset-btn" onclick="selectAdset(1,1,this)">2565+_여성_어드밴티지_2(구매_30일제외)</button>
+      </div>
+      <div class="cr-adset-group" id="ag-1-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(2,this)">고조선_일반_1 🆕</button>
+      </div>
+      <div class="cr-adset-group" id="ag-1-1" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(5,this)">고조선_일반_2 🆕</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-2" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(3,this)">타이밍은지금_일반</button>
-      <button class="cr-tab" onclick="selectCreative(8,this)">온몸이뭉친사람_일반</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(2,0,this)">3055_여성_맞춤타겟_1</button>
+        <button class="cr-adset-btn" onclick="selectAdset(2,1,this)">3055_여성_맞춤타겟_2</button>
+      </div>
+      <div class="cr-adset-group" id="ag-2-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(3,this)">타이밍은지금_일반</button>
+      </div>
+      <div class="cr-adset-group" id="ag-2-1" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(8,this)">온몸이뭉친사람_일반</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-3" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(4,this)">공홈특가_일반 - 사본 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(3,0,this)">2555_여성_맞춤타겟</button>
+      </div>
+      <div class="cr-adset-group" id="ag-3-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(4,this)">공홈특가_일반 - 사본 🆕</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-4" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(6,this)">타이밍_일반_1</button>
-      <button class="cr-tab" onclick="selectCreative(13,this)">온몸이_일반_2</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(4,0,this)">2555_남성_어드밴티지</button>
+      </div>
+      <div class="cr-adset-group" id="ag-4-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(6,this)">타이밍_일반_1</button>
+        <button class="cr-tab" onclick="selectCreative(13,this)">온몸이_일반_2</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-5" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(7,this)">런닝10km_랜딩페이지 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(5,0,this)">2555_전체_관심사타겟_1</button>
+      </div>
+      <div class="cr-adset-group" id="ag-5-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(7,this)">런닝10km_랜딩페이지 🆕</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-6" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(9,this)">압도적_시원함_가로_일 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(15,this)">1초극락_단일영상_가로 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(16,this)">1초극락_단일영상_세로 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(17,this)">힐링템_가로_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(18,this)">포맷_1번_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(19,this)">힐링템_세로_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(20,this)">포맷_2번_분할_일반 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(21,this)">압도적_시원함_세로_일 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(6,0,this)">2555_전체_맞춤타겟</button>
+      </div>
+      <div class="cr-adset-group" id="ag-6-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(9,this)">압도적_시원함_가로_일 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(15,this)">1초극락_단일영상_가로 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(16,this)">1초극락_단일영상_세로 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(17,this)">힐링템_가로_일반 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(18,this)">포맷_1번_일반 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(19,this)">힐링템_세로_일반 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(20,this)">포맷_2번_분할_일반 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(21,this)">압도적_시원함_세로_일 🆕</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-7" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(10,this)">릴렉스틱/릴렉스틱볼/올 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(7,0,this)">2555_전체_맞춤타겟</button>
+      </div>
+      <div class="cr-adset-group" id="ag-7-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(10,this)">릴렉스틱/릴렉스틱볼/올 🆕</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-8" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(11,this)">쇼호스트_일반</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(8,0,this)">2555_전체_맞춤타겟</button>
+      </div>
+      <div class="cr-adset-group" id="ag-8-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(11,this)">쇼호스트_일반</button>
+      </div>
     </div>
     <div class="cr-camp-group" id="cg-9" style="display:none">
-      <button class="cr-tab" onclick="selectCreative(12,this)">루피/윤쓰_파트너십 🆕</button>
-      <button class="cr-tab" onclick="selectCreative(14,this)">루피/김채린_파트너십 🆕</button>
+      <div class="cr-adset-bar">
+        <button class="cr-adset-btn" onclick="selectAdset(9,0,this)">헤임타_고객대상2</button>
+      </div>
+      <div class="cr-adset-group" id="ag-9-0" style="display:none">
+        <button class="cr-tab" onclick="selectCreative(12,this)">루피/윤쓰_파트너십 🆕</button>
+        <button class="cr-tab" onclick="selectCreative(14,this)">루피/김채린_파트너십 🆕</button>
+      </div>
     </div>
 
 
@@ -1889,13 +1952,20 @@ function selectCampaign(ci){
   document.querySelectorAll('.cr-camp-group').forEach((g,i)=>{g.style.display=i===ci?'':'none';});
   document.querySelectorAll('.cr-camp-chart').forEach((c,i)=>{c.style.display=i===ci?'':'none';});
   initCampChart(ci);
-  const first=document.querySelector('#cg-'+ci+' .cr-tab');
-  if(first)first.click();
+  const firstAdset=document.querySelector('#cg-'+ci+' .cr-adset-btn');
+  if(firstAdset)firstAdset.click();
+}
+function selectAdset(ci,ai,btn){
+  btn.closest('.cr-camp-group').querySelectorAll('.cr-adset-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[id^="ag-'+ci+'-"]').forEach((g,i)=>{g.style.display=i===ai?'':'none';});
+  const firstAd=document.querySelector('#ag-'+ci+'-'+ai+' .cr-tab');
+  if(firstAd)firstAd.click();
 }
 function selectCreative(idx,btn){
   document.querySelectorAll('.cr-panel').forEach(p=>p.classList.remove('active'));
   document.getElementById('crp-'+idx).classList.add('active');
-  btn.closest('.cr-camp-group').querySelectorAll('.cr-tab').forEach(b=>b.classList.remove('active'));
+  btn.closest('.cr-adset-group').querySelectorAll('.cr-tab').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
 }
 const _campCharts={};
