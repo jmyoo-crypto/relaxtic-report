@@ -165,6 +165,9 @@ tr.row-hl td { font-weight: 800; background: #fff; }
 .meta-front-panel{display:none;}.meta-front-panel.active{display:block;}
 .mfc-btn{background:#f1f5f9;color:#475569;border:1px solid #e2e8f0;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:700;cursor:pointer;}
 .mfc-btn.active{background:#6366f1;color:#fff;border-color:#6366f1;}
+.cr-chart-tabs{display:flex;gap:4px;flex-wrap:wrap;}
+.cr-chart-tab{background:#f1f5f9;color:#64748b;border:1px solid #e2e8f0;padding:3px 10px;border-radius:14px;font-size:11px;cursor:pointer;}
+.cr-chart-tab.active{background:#6366f1;color:#fff;border-color:#6366f1;}
 .cr-tab {
   padding: 8px 16px; border-radius: 8px; border: 1.5px solid #e2e8f0;
   background: #f8fafc; font-size: 13px; font-weight: 700; color: #64748b;
@@ -1071,6 +1074,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.55%</div><div class="cr-kpi-curr">2.40%</div><span class="tag-dn">▼ 5.9%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 72,564원</div><div class="cr-kpi-curr">51,781원</div><span class="tag-up">▼ 28.6%</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-0">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-0','crtabs-0',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-0','crtabs-0',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-0','crtabs-0',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-0','crtabs-0',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-0" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 1: 릴렉스틱/릴렉스틱볼_영상_공홈특가_일반 -->
     <div class="cr-panel" id="crp-1">
@@ -1089,6 +1106,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 596원</div><div class="cr-kpi-curr">643원</div><span class="tag-dn">▲ 7.9%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.69%</div><div class="cr-kpi-curr">2.27%</div><span class="tag-dn">▼ 15.6%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 60,039원</div><div class="cr-kpi-curr">54,969원</div><span class="tag-up">▼ 8.4%</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-1">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-1','crtabs-1',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-1','crtabs-1',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-1','crtabs-1',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-1','crtabs-1',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-1" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 2: 릴렉스틱_영상_고조선_일반_1 -->
@@ -1109,6 +1140,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.65%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">88,980원</div><span class="tag-up">🆕 신규</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-2">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-2','crtabs-2',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-2','crtabs-2',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-2','crtabs-2',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-2','crtabs-2',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-2" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 3: 릴렉스틱_영상_타이밍은지금_일반 -->
     <div class="cr-panel" id="crp-3">
@@ -1127,6 +1172,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 671원</div><div class="cr-kpi-curr">647원</div><span class="tag-up">▼ 3.6%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.04%</div><div class="cr-kpi-curr">1.97%</div><span class="tag-dn">▼ 3.4%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 16,249원</div><div class="cr-kpi-curr">51,012원</div><span class="tag-dn">▲ 213.9%</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-3">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-3','crtabs-3',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-3','crtabs-3',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-3','crtabs-3',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-3','crtabs-3',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-3" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 4: 릴렉스틱/릴렉스틱볼_영상_공홈특가_일반 - 사본 -->
@@ -1147,6 +1206,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.15%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">78,054원</div><span class="tag-up">🆕 신규</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-4">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-4','crtabs-4',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-4','crtabs-4',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-4','crtabs-4',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-4','crtabs-4',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-4" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 5: 릴렉스틱_영상_고조선_일반_2 -->
     <div class="cr-panel" id="crp-5">
@@ -1165,6 +1238,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,035원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.55%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">48,388원</div><span class="tag-up">🆕 신규</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-5">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-5','crtabs-5',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-5','crtabs-5',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-5','crtabs-5',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-5','crtabs-5',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-5" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 6: 릴렉스틱_영상_타이밍_일반_1 -->
@@ -1185,6 +1272,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 2.10%</div><div class="cr-kpi-curr">2.76%</div><span class="tag-up">▲ 31.4%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 41,593원</div><div class="cr-kpi-curr">179,315원</div><span class="tag-dn">▲ 331.1%</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-6">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-6','crtabs-6',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-6','crtabs-6',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-6','crtabs-6',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-6','crtabs-6',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-6" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 7: 릴렉스틱_영상_런닝10km_랜딩페이지조회수_일반 -->
     <div class="cr-panel" id="crp-7">
@@ -1203,6 +1304,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">96원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6.76%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">35,200원</div><span class="tag-up">🆕 신규</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-7">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-7','crtabs-7',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-7','crtabs-7',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-7','crtabs-7',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-7','crtabs-7',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-7" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 8: 릴렉스틱_영상_온몸이뭉친사람_일반 -->
@@ -1223,6 +1338,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 1.21%</div><div class="cr-kpi-curr">2.12%</div><span class="tag-up">▲ 75.2%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 32,942원</div><div class="cr-kpi-curr">—</div><span class="tag-dn">⏸ 정지</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-8">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-8','crtabs-8',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-8','crtabs-8',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-8','crtabs-8',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-8','crtabs-8',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-8" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 9: 릴렉스틱_영상_압도적_시원함_가로_일반 -->
     <div class="cr-panel" id="crp-9">
@@ -1241,6 +1370,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,058원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.29%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">96,250원</div><span class="tag-up">🆕 신규</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-9">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-9','crtabs-9',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-9','crtabs-9',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-9','crtabs-9',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-9','crtabs-9',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-9" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 10: 릴렉스틱/릴렉스틱볼/올인원마사지기/EMS손목마사지기/EMS허리마사지기/이벤트페이지_영상_가정의달 페스타 폴라로이드_일반 -->
@@ -1261,6 +1404,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.89%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-10">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-10','crtabs-10',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-10','crtabs-10',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-10','crtabs-10',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-10','crtabs-10',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-10" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 11: 릴렉스틱_영상_쇼호스트_일반 -->
     <div class="cr-panel" id="crp-11">
@@ -1279,6 +1436,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 649원</div><div class="cr-kpi-curr">851원</div><span class="tag-dn">▲ 31.1%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 3.27%</div><div class="cr-kpi-curr">2.45%</div><span class="tag-dn">▼ 25.1%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-11">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-11','crtabs-11',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-11','crtabs-11',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-11','crtabs-11',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-11','crtabs-11',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-11" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 12: 릴렉스틱오리지널-루피/릴렉스틱볼-루피_영상_윤쓰_파트너십 -->
@@ -1299,6 +1470,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">6.00%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-12">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-12','crtabs-12',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-12','crtabs-12',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-12','crtabs-12',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-12','crtabs-12',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-12" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 13: 릴렉스틱_영상_온몸이_일반_2 -->
     <div class="cr-panel" id="crp-13">
@@ -1317,6 +1502,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 893원</div><div class="cr-kpi-curr">506원</div><span class="tag-up">▼ 43.3%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 1.19%</div><div class="cr-kpi-curr">3.73%</div><span class="tag-up">▲ 213.4%</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 19,940원</div><div class="cr-kpi-curr">—</div><span class="tag-dn">⏸ 정지</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-13">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-13','crtabs-13',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-13','crtabs-13',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-13','crtabs-13',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-13','crtabs-13',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-13" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 14: 릴렉스틱오리지널-루피/릴렉스틱볼-루피_영상_김채린_파트너십 -->
@@ -1337,6 +1536,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.96%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-14">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-14','crtabs-14',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-14','crtabs-14',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-14','crtabs-14',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-14','crtabs-14',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-14" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 15: 릴렉스틱_영상_1초극락_단일영상_가로_일반 -->
     <div class="cr-panel" id="crp-15">
@@ -1355,6 +1568,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">910원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.75%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-15">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-15','crtabs-15',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-15','crtabs-15',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-15','crtabs-15',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-15','crtabs-15',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-15" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 16: 릴렉스틱_영상_1초극락_단일영상_세로_일반 -->
@@ -1375,6 +1602,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.51%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-16">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-16','crtabs-16',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-16','crtabs-16',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-16','crtabs-16',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-16','crtabs-16',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-16" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 17: 릴렉스틱_영상_힐링템_가로_일반 -->
     <div class="cr-panel" id="crp-17">
@@ -1393,6 +1634,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">734원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.01%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-17">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-17','crtabs-17',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-17','crtabs-17',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-17','crtabs-17',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-17','crtabs-17',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-17" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 18: 릴렉스틱_영상_포맷_1번_일반 -->
@@ -1413,6 +1668,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.26%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-18">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-18','crtabs-18',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-18','crtabs-18',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-18','crtabs-18',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-18','crtabs-18',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-18" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 19: 릴렉스틱_영상_힐링템_세로_일반 -->
     <div class="cr-panel" id="crp-19">
@@ -1431,6 +1700,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPC</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1,283원</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">1.73%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
+      </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-19">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-19','crtabs-19',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-19','crtabs-19',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-19','crtabs-19',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-19','crtabs-19',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-19" style="max-height:220px;"></canvas>
+        </div>
       </div>
     </div>
     <!-- 패널 20: 릴렉스틱_영상_포맷_2번_분할_일반 -->
@@ -1451,6 +1734,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">2.16%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-20">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-20','crtabs-20',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-20','crtabs-20',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-20','crtabs-20',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-20','crtabs-20',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-20" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
     <!-- 패널 21: 릴렉스틱_영상_압도적_시원함_세로_일반 -->
     <div class="cr-panel" id="crp-21">
@@ -1470,47 +1767,20 @@ tr.row-hl td { font-weight: 800; background: #fff; }
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CTR</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">3.16%</div><span class="tag-up">🆕 신규</span></div>
         <div class="cr-kpi-box"><div class="cr-kpi-lbl">CPA</div><div class="cr-kpi-prev">지난주 —</div><div class="cr-kpi-curr">—</div><span class="tag-neu">—</span></div>
       </div>
-    </div>
-
-    <div class="cr-camp-chart" id="cc-0">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-0" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-1" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-1" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-2" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-2" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-3" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-3" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-4" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-4" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-5" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-5" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-6" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-6" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-7" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-7" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-8" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-8" style="max-height:200px;"></canvas>
-    </div>
-    <div class="cr-camp-chart" id="cc-9" style="display:none">
-      <div class="cr-subsec" style="margin-top:8px;">📊 세트 비용 비교 — 지지난주 vs 지난주</div>
-      <canvas id="cc-canvas-9" style="max-height:200px;"></canvas>
+      <div style="margin-top:20px;border-top:1px solid #f3f4f6;padding-top:16px;">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+          <div class="cr-subsec" style="margin-bottom:0;">기간별 성과 트렌드</div>
+          <div class="cr-chart-tabs" id="crtabs-21">
+            <button class="cr-chart-tab active" onclick="switchTrend('crTrend-21','crtabs-21',0)">비용</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-21','crtabs-21',1)">CPM</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-21','crtabs-21',2)">CTR</button>
+            <button class="cr-chart-tab" onclick="switchTrend('crTrend-21','crtabs-21',3)">CPA</button>
+          </div>
+        </div>
+        <div class="chart-card" style="box-shadow:none;border:1px solid #f1f5f9;padding:16px 20px;">
+          <canvas id="crTrend-21" style="max-height:220px;"></canvas>
+        </div>
+      </div>
     </div>
 
 
@@ -1812,18 +2082,33 @@ const CR_DATA = {
   pur:   { last:[22, 18, 4, 6, 3, 4, 1, 5, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  prev:[2, 6, 0, 14, 0, 0, 5, 0, 7, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0] },
   cpa:   { last:[51781, 54969, 88980, 51012, 78054, 48388, 179315, 35200, 0, 96250, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  prev:[72564, 60039, 0, 16249, 0, 0, 41593, 0, 32942, 0, 0, 0, 0, 19940, 0, 0, 0, 0, 0, 0, 0, 0] },
 };
-const CAMP_ADS = {
-  0: {idxs:[0, 1], labels:["판매 1위_일반", "공홈특가_일반"]},
-  1: {idxs:[2, 5], labels:["고조선_일반_1", "고조선_일반_2"]},
-  2: {idxs:[3, 8], labels:["타이밍은지금_일반", "온몸이뭉친사람_일반"]},
-  3: {idxs:[4], labels:["공홈특가_일반 - 사본"]},
-  4: {idxs:[6, 13], labels:["타이밍_일반_1", "온몸이_일반_2"]},
-  5: {idxs:[7], labels:["런닝10km_랜딩페이지"]},
-  6: {idxs:[9, 15, 16, 17, 18, 19, 20, 21], labels:["압도적_시원함_가로_일", "1초극락_단일영상_가로", "1초극락_단일영상_세로", "힐링템_가로_일반", "포맷_1번_일반", "힐링템_세로_일반", "포맷_2번_분할_일반", "압도적_시원함_세로_일"]},
-  7: {idxs:[10], labels:["릴렉스틱/릴렉스틱볼/올"]},
-  8: {idxs:[11], labels:["쇼호스트_일반"]},
-  9: {idxs:[12, 14], labels:["루피/윤쓰_파트너십", "루피/김채린_파트너십"]},
+const CR_TREND_DATA = {
+  0: {cost:[141097,145128,1139191],cpm:[15250,15833,18190],ctr:[1.76,2.55,2.4],cpa:[47032,72564,51781]},
+  1: {cost:[361129,360235,989439],cpm:[11641,16032,14574],ctr:[1.53,2.69,2.27],cpa:[45141,60039,54969]},
+  2: {cost:[null,null,355920],cpm:[null,null,31104],ctr:[null,null,2.65],cpa:[null,null,88980]},
+  3: {cost:[285509,227485,306074],cpm:[12488,13692,12762],ctr:[1.21,2.04,1.97],cpa:[35689,16249,51012]},
+  4: {cost:[null,null,234161],cpm:[null,null,14463],ctr:[null,null,2.15],cpa:[null,null,78054]},
+  5: {cost:[null,null,193552],cpm:[null,null,26359],ctr:[null,null,2.55],cpa:[null,null,48388]},
+  6: {cost:[null,207963,179315],cpm:[null,15539,17408],ctr:[null,2.1,2.76],cpa:[null,41593,179315]},
+  7: {cost:[null,null,175999],cpm:[null,null,6520],ctr:[null,null,6.76],cpa:[null,null,35200]},
+  8: {cost:[299107,230592,102381],cpm:[12274,13696,18517],ctr:[0.92,1.21,2.12],cpa:[74777,32942,null]},
+  9: {cost:[null,null,96250],cpm:[null,null,13602],ctr:[null,null,1.29],cpa:[null,null,96250]},
+  10: {cost:[null,null,94163],cpm:[null,null,14918],ctr:[null,null,1.89],cpa:[null,null,null]},
+  11: {cost:[null,51302,85065],cpm:[null,21225,20814],ctr:[null,3.27,2.45],cpa:[null,null,null]},
+  12: {cost:[null,null,66428],cpm:[null,null,25539],ctr:[null,null,6.0],cpa:[null,null,null]},
+  13: {cost:[null,59819,24781],cpm:[null,10627,18859],ctr:[null,1.19,3.73],cpa:[null,19940,null]},
+  14: {cost:[null,null,22710],cpm:[null,null,15272],ctr:[null,null,2.96],cpa:[null,null,null]},
+  15: {cost:[null,null,19101],cpm:[null,null,15904],ctr:[null,null,1.75],cpa:[null,null,null]},
+  16: {cost:[null,null,15927],cpm:[null,null,19006],ctr:[null,null,2.51],cpa:[null,null,null]},
+  17: {cost:[null,null,15416],cpm:[null,null,14724],ctr:[null,null,2.01],cpa:[null,null,null]},
+  18: {cost:[null,null,11141],cpm:[null,null,13996],ctr:[null,null,2.26],cpa:[null,null,null]},
+  19: {cost:[null,null,3850],cpm:[null,null,22254],ctr:[null,null,1.73],cpa:[null,null,null]},
+  20: {cost:[null,null,2557],cpm:[null,null,18396],ctr:[null,null,2.16],cpa:[null,null,null]},
+  21: {cost:[null,null,2002],cpm:[null,null,21074],ctr:[null,null,3.16],cpa:[null,null,null]},
 };
+const CR_TREND_LABELS = ["3주전 4/6~12","지지난주 4/13~19","지난주 4/20~26"];
+const CR_TREND_FMT = ['won','won','pct','won'];
+const CR_TREND_KEYS = ['cost','cpm','ctr','cpa'];
 
 
 let crChart = null;
@@ -1874,8 +2159,6 @@ function switchCreativeMetric(idx) {
 function selectCampaign(ci){
   document.querySelectorAll('.cr-camp-btn').forEach((b,i)=>b.classList.toggle('active',i===ci));
   document.querySelectorAll('.cr-camp-group').forEach((g,i)=>{g.style.display=i===ci?'flex':'none';});
-  document.querySelectorAll('.cr-camp-chart').forEach((c,i)=>{c.style.display=i===ci?'':'none';});
-  initCampChart(ci);
   const first=document.querySelector('#cg-'+ci+' .cr-tab');
   if(first)first.click();
 }
@@ -1884,35 +2167,42 @@ function selectCreative(idx,btn){
   document.getElementById('crp-'+idx).classList.add('active');
   btn.closest('.cr-camp-group').querySelectorAll('.cr-tab').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
+  const tabsId='crtabs-'+idx;
+  const tb=document.getElementById(tabsId);
+  if(tb){const act=tb.querySelector('.cr-chart-tab.active');const actIdx=act?[...tb.querySelectorAll('.cr-chart-tab')].indexOf(act):0;switchTrend('crTrend-'+idx,tabsId,actIdx);}
 }
-const _campCharts={};
-function initCampChart(ci){
-  if(_campCharts[ci])return;
-  const info=CAMP_ADS[ci];
-  const last=info.idxs.map(i=>CR_DATA.cost.last[i]);
-  const prev=info.idxs.map(i=>CR_DATA.cost.prev[i]);
-  const ctx=document.getElementById('cc-canvas-'+ci).getContext('2d');
-  _campCharts[ci]=new Chart(ctx,{
+const _crTrendCharts={};
+function switchTrend(canvasId,tabsId,idx){
+  const tb=document.getElementById(tabsId);
+  if(tb)tb.querySelectorAll('.cr-chart-tab').forEach((b,i)=>b.classList.toggle('active',i===idx));
+  const adIdx=parseInt(canvasId.replace('crTrend-',''));
+  const d=CR_TREND_DATA[adIdx];
+  const fmt=CR_TREND_FMT[idx];
+  const raw=d[CR_TREND_KEYS[idx]];
+  const yCb=v=>{if(v===null)return'';return fmt==='won'?(v>=10000?(v/10000).toFixed(0)+'만원':v+'원'):fmt==='pct'?v.toFixed(2)+'%':v;};
+  const ttCb=ctx=>{const v=ctx.parsed.y;if(v===null)return' —';return' '+(fmt==='won'?v.toLocaleString('ko-KR')+'원':fmt==='pct'?v.toFixed(2)+'%':v);};
+  const ptClr=raw.map((v,i)=>v===null?'#e2e8f0':i===raw.length-1?'#6366f1':'#a5b4fc');
+  if(_crTrendCharts[canvasId]){
+    const ch=_crTrendCharts[canvasId];
+    ch.data.datasets[0].data=raw;
+    ch.data.datasets[0].pointBackgroundColor=ptClr;
+    ch.options.scales.y.ticks.callback=yCb;
+    ch.options.plugins.tooltip.callbacks.label=ttCb;
+    ch.update();return;
+  }
+  const el=document.getElementById(canvasId);if(!el)return;
+  _crTrendCharts[canvasId]=new Chart(el,{
     type:'line',
-    data:{
-      labels:info.labels,
-      datasets:[
-        {label:'이번주',data:last,borderColor:'rgba(99,102,241,1)',backgroundColor:'rgba(99,102,241,0.1)',pointBackgroundColor:'rgba(99,102,241,1)',pointRadius:5,tension:0.3,fill:true},
-        {label:'지난주',data:prev,borderColor:'rgba(148,163,184,0.8)',backgroundColor:'rgba(148,163,184,0.05)',pointBackgroundColor:'rgba(148,163,184,0.8)',pointRadius:5,tension:0.3,fill:true}
-      ]
-    },
-    options:{
-      responsive:true,maintainAspectRatio:false,
-      plugins:{legend:{position:'top',labels:{font:{size:11},boxWidth:12}},
-               tooltip:{callbacks:{label:v=>v.dataset.label+': '+v.raw.toLocaleString()+'원'}}},
+    data:{labels:CR_TREND_LABELS,datasets:[{data:raw,borderColor:'#6366f1',backgroundColor:'rgba(99,102,241,0.08)',borderWidth:2.5,pointBackgroundColor:ptClr,pointRadius:6,tension:0.35,spanGaps:false}]},
+    options:{responsive:true,plugins:{legend:{display:false},tooltip:{backgroundColor:'#1a1a2e',callbacks:{label:ttCb}}},
       scales:{
-        x:{ticks:{font:{size:10}},grid:{color:'#f1f5f9'}},
-        y:{ticks:{callback:v=>v>=10000?(v/10000).toFixed(0)+'만원':v+'원',font:{size:10}},grid:{color:'#f1f5f9'}}
+        y:{beginAtZero:false,grid:{color:'#f5f5f5'},ticks:{font:{size:11},color:'#bbb',callback:yCb},border:{display:false}},
+        x:{grid:{display:false},ticks:{font:{size:11},color:'#555'},border:{display:false}}
       }
     }
   });
 }
-window.addEventListener('load',()=>initCampChart(0));
+window.addEventListener('load',()=>switchTrend('crTrend-0','crtabs-0',0));
 function switchMetaFront(idx,btn){
   document.getElementById('meta-front-toggle').querySelectorAll('.toggle-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
   document.querySelectorAll('.meta-front-panel').forEach((p,i)=>p.classList.toggle('active',i===idx));
