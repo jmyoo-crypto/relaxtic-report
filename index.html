@@ -1886,7 +1886,7 @@ function switchCreativeMetric(idx) {
 
 function selectCampaign(ci){
   document.querySelectorAll('.cr-camp-btn').forEach((b,i)=>b.classList.toggle('active',i===ci));
-  document.querySelectorAll('.cr-camp-group').forEach((g,i)=>{g.style.display=i===ci?'':'none';});
+  document.querySelectorAll('.cr-camp-group').forEach((g,i)=>{g.style.display=i===ci?'flex':'none';});
   document.querySelectorAll('.cr-camp-chart').forEach((c,i)=>{c.style.display=i===ci?'':'none';});
   initCampChart(ci);
   const first=document.querySelector('#cg-'+ci+' .cr-tab');
